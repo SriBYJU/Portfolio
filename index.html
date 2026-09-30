@@ -147,6 +147,31 @@
     .beyond-card p{color:var(--ink-soft);font-size:13px;max-width:520px;margin:0;line-height:1.7}
     .beyond-card .mini{margin-top:25px;font:500 10px/1.5 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:var(--orange)}
 
+
+    /* CREDENTIALS */
+    .credentials{background:#ece7de;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-bottom:110px}
+    .credentials .section-head{padding-bottom:34px}
+    .credential-lede{display:grid;grid-template-columns:210px 1fr;gap:30px;margin:-20px 0 30px}
+    .credential-lede p{grid-column:2;margin:0;color:var(--ink-soft);max-width:760px;font-size:14px;line-height:1.75}
+    .credential-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-left:1px solid var(--line);border-top:1px solid var(--line)}
+    .credential-card{min-height:230px;padding:26px 24px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:24px;background:rgba(255,255,255,.22);transition:background .22s ease,transform .22s ease}
+    .credential-card:hover{background:#f7f3eb;transform:translateY(-2px)}
+    .credential-top{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .credential-logo-wrap{height:34px;max-width:148px;display:flex;align-items:center}
+    .credential-logo{max-width:100%;max-height:30px;object-fit:contain;object-position:left center}
+    .credential-logo.text-logo{font:700 15px/1.1 Manrope,sans-serif;letter-spacing:-.03em;color:var(--ink);white-space:nowrap}
+    .credential-rank{font:500 9px/1 'IBM Plex Mono',monospace;color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase}
+    .credential-card h3{font-family:'Instrument Serif',serif;font-size:29px;font-weight:400;line-height:1.02;letter-spacing:-.025em;margin:0 0 8px}
+    .credential-org{font-size:11px;font-weight:700;color:var(--ink);margin-bottom:7px}
+    .credential-meta{font:400 9px/1.5 'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.055em}
+    .credential-linkline{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:13px;font-size:11px;font-weight:700}
+    .credential-card:hover .credential-linkline span:last-child{transform:translate(2px,-2px)}
+    .credential-linkline span:last-child{transition:transform .2s ease}
+    .credential-footer{margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--ink-soft);font-size:11px}
+    .credential-footer a{font-weight:800;color:var(--ink);border-bottom:1px solid var(--line-strong)}
+    @media (max-width:980px){.credential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.credential-lede{grid-template-columns:150px 1fr}}
+    @media (max-width:700px){.credentials{padding-bottom:76px}.credential-grid{grid-template-columns:1fr}.credential-lede{grid-template-columns:1fr;margin-top:-18px}.credential-lede p{grid-column:1}.credential-card{min-height:205px}}
+
     /* ABOUT */
     .about{border-top:1px solid var(--line);padding:110px 0 100px}
     .about-grid{display:grid;grid-template-columns:210px minmax(0,1.25fr) minmax(260px,.55fr);gap:30px}
@@ -221,6 +246,7 @@
       <div class="nav-links">
         <a href="#work">Work</a>
         <a href="#press">Press</a>
+        <a href="#credentials">Credentials</a>
         <a href="#about">About</a>
         <a class="nav-contact" href="#contact">Contact</a>
       </div>
@@ -234,7 +260,7 @@
           <div class="reveal">
             <div class="eyebrow">Builder · Founder · Student · Virginia</div>
             <h1>I build things people can <em>actually use.</em></h1>
-            <p class="hero-copy">I’m Shriyan Avadhanula. I build products across college access, finance, privacy, smart glasses, athlete technology and AI tooling—usually because I ran into a problem and wanted a better answer than “that’s just how it works.”</p>
+            <p class="hero-copy">I’m Shriyan Avadhanula. I build products across college access, finance, privacy, smart glasses and AI tooling—usually because I ran into a problem and wanted a better answer than “that’s just how it works.”</p>
             <div class="hero-actions">
               <a class="btn btn-dark" href="#work">See the work <span>↓</span></a>
               <a class="btn btn-quiet" href="mailto:avadhanula.shriyan@gmail.com">Email me</a>
@@ -242,14 +268,14 @@
           </div>
           <div class="hero-photo-wrap reveal">
             <img class="hero-photo" id="heroPhoto" src="https://raw.githubusercontent.com/SriBYJU/CapitalMastery/main/assets/founder-shriyan.jpg" alt="Portrait of Shriyan Avadhanula" fetchpriority="high" />
-            <div class="photo-note"><strong>Shriyan</strong>Building, writing, playing, learning.<br/>All at 16.</div>
+            <div class="photo-note"><strong>Shriyan</strong>Building, writing, learning.<br/>All at 16.</div>
           </div>
         </div>
         <div class="hero-proof stagger">
           <div class="proof"><strong>10K+</strong><span>monthly users referenced for Scholark</span></div>
           <div class="proof"><strong>20+</strong><span>national & international publications</span></div>
           <div class="proof"><strong>1</strong><span>U.S. provisional patent filing</span></div>
-          <div class="proof"><strong>8+</strong><span>competitive pickleball sponsors</span></div>
+          <div class="proof"><strong>30+</strong><span>professional credentials & learning programs</span></div>
         </div>
       </div>
     </header>
@@ -275,7 +301,7 @@
             </div>
             <div>
               <div class="project-meta"><a class="btn btn-dark" href="https://sribyju.github.io/" target="_blank" rel="noopener">Open website ↗</a><button class="btn btn-quiet more-btn" data-project="scholark">Tell me more</button></div>
-              <div class="project-note">10K+ monthly users referenced · Free to use</div>
+              <div class="project-note">10K+ users · 23 AP courses · 7,444 SAT/ACT questions · 50 full-size simulations</div>
             </div>
           </div>
           <button class="project-visual more-btn" data-project="scholark" aria-label="Learn more about Scholark">
@@ -294,11 +320,11 @@
             </div>
             <div>
               <div class="project-meta"><a class="btn btn-dark" href="https://sribyju.github.io/CapitalMastery/" target="_blank" rel="noopener">Open website ↗</a><button class="btn btn-quiet more-btn" data-project="capital">Tell me more</button></div>
-              <div class="project-note">16 finance career pathways · learner + employer layers</div>
+              <div class="project-note">80+ free credentials · 16 finance pathways · real-world simulations · employer layer</div>
             </div>
           </div>
           <button class="project-visual more-btn" data-project="capital" aria-label="Learn more about Capital Mastery">
-            <img class="cover" src="https://raw.githubusercontent.com/SriBYJU/CapitalMastery/main/docs/product-preview/02-homepage/home-desktop.webp" alt="Capital Mastery homepage" loading="lazy" />
+            <img class="cover" src="https://raw.githubusercontent.com/SriBYJU/CapitalMastery/main/assets/approved-brand-board.webp" alt="Capital Mastery homepage" loading="lazy" />
             <span class="visual-overlay"><span class="visual-label">FinTech / Workforce readiness</span><span class="open-corner">↗</span></span>
           </button>
         </article>
@@ -307,7 +333,7 @@
           <div class="project-index">03</div>
           <div class="project-copy">
             <div>
-              <div class="project-brand"><span class="wordmark">OpenLens</span></div>
+              <div class="project-brand"><img class="mark" src="https://raw.githubusercontent.com/SriBYJU/OpenLens/main/public/favicon.svg" alt="OpenLens mark"/><span class="wordmark">OpenLens</span></div>
               <h3>An open workbench for smart glasses.</h3>
               <p>A development, simulation, research and benchmarking environment for building and testing smart-glasses experiences without needing a physical device.</p>
             </div>
@@ -317,7 +343,7 @@
             </div>
           </div>
           <button class="project-visual more-btn" data-project="openlens" aria-label="Learn more about OpenLens">
-            <img class="cover" src="https://raw.githubusercontent.com/SriBYJU/OpenLens/main/public/assets/openlens-glasses-hero-v3.webp" alt="OpenLens smart glasses visual" loading="lazy" />
+            <img class="cover" src="https://raw.githubusercontent.com/SriBYJU/OpenLens/main/public/assets/openlens-social-v1.jpg" alt="OpenLens smart glasses visual" loading="lazy" />
             <span class="visual-overlay"><span class="visual-label">AR / Developer tools</span><span class="open-corner">↗</span></span>
           </button>
         </article>
@@ -336,7 +362,7 @@
             </div>
           </div>
           <button class="project-visual more-btn" data-project="datashadow" aria-label="Learn more about DataShadow">
-            <span class="brand-stage violet"><img src="https://raw.githubusercontent.com/SriBYJU/DataShadow/main/datashadow-logo.svg" alt="DataShadow wordmark" loading="lazy" /></span>
+            <img class="cover" src="https://raw.githubusercontent.com/SriBYJU/DataShadow/main/qa-polish-light.png" alt="DataShadow product interface preview" loading="lazy" />
             <span class="visual-overlay"><span class="visual-label">Privacy / Data rights</span><span class="open-corner">↗</span></span>
           </button>
         </article>
@@ -355,7 +381,7 @@
             </div>
           </div>
           <button class="project-visual more-btn" data-project="dinksense" aria-label="Learn more about DinkSense">
-            <span class="brand-stage sport"><img src="https://raw.githubusercontent.com/SriBYJU/DinkSense/main/icon-512.png" alt="DinkSense app icon" loading="lazy" /></span>
+            <img class="cover" src="https://raw.githubusercontent.com/SriBYJU/DinkSense/main/dashboard-v1.7.png" alt="DinkSense dashboard preview" loading="lazy" />
             <span class="visual-overlay"><span class="visual-label">Sports tech / PWA</span><span class="open-corner">↗</span></span>
           </button>
         </article>
@@ -374,7 +400,7 @@
             </div>
           </div>
           <button class="project-visual more-btn" data-project="veyra" aria-label="Learn more about Veyra">
-            <span class="brand-stage fitness"><img src="https://raw.githubusercontent.com/SriBYJU/Veyra/main/assets/icon-512.png" alt="Veyra app icon" loading="lazy" /></span>
+            <img class="cover" src="https://raw.githubusercontent.com/SriBYJU/Veyra/main/assets/veyra-promo.png" alt="Veyra product preview" loading="lazy" />
             <span class="visual-overlay"><span class="visual-label">Fitness / Personal data</span><span class="open-corner">↗</span></span>
           </button>
         </article>
@@ -417,20 +443,137 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div class="eyebrow">03 / Beyond the builds</div>
-          <div><h2>What else shaped the way I work.</h2><p>The products matter, but so do the environments that changed how I think about risk, business, writing and performance.</p></div>
+          <div><h2>What else shaped the way I work.</h2><p>The products matter, but so do the environments that changed how I think about risk, business, writing and learning.</p></div>
         </div>
         <div class="beyond-grid stagger">
           <article class="beyond-card"><div><div class="eyebrow">Cybersecurity exposure</div><h3>IBM</h3><p>Observed enterprise cybersecurity practices across penetration testing, vulnerability management, security assessments, risk management and enterprise security.</p></div><div class="mini">Observation & exposure — not represented as hands-on ownership</div></article>
           <article class="beyond-card"><div><div class="eyebrow">Finance & M&A</div><h3>Sterling Point Advisors</h3><p>M&A mentorship with a managing director helped ground Capital Mastery in what finance readiness looks like beyond textbook knowledge.</p></div><div class="mini">Mentorship · finance readiness · pre-onboarding context</div></article>
           <article class="beyond-card"><div><div class="eyebrow">Writing & media</div><h3>Ideas in public</h3><p>Published writing and coverage across national and international outlets, plus letters and op-eds on technology, education and student innovation.</p></div><div class="mini">20+ publications · editorial writing · founder coverage</div></article>
-          <article class="beyond-card"><div><div class="eyebrow">Athletics</div><h3>Competition changes the tempo.</h3><p>Competitive pickleball with 8+ sponsors, alongside multiple varsity soccer seasons. It’s where iteration, pressure and consistency stop being metaphors.</p></div><div class="mini">Pickleball · varsity soccer · sponsorships</div></article>
+          <article class="beyond-card"><div><div class="eyebrow">Continuous learning</div><h3>30+ credentials across finance, AI & security.</h3><p>I use structured programs to learn the language, workflows and judgment behind the systems I build—from investment banking and risk to generative AI, automation and cybersecurity.</p></div><div class="mini"><a href="#credentials">JPMorganChase · Goldman Sachs · IBM · Anthropic · OpenAI →</a></div></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="credentials" class="credentials">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">04 / Credentials</div>
+          <div><h2>Learning with receipts.</h2><p>30+ credentials and professional learning programs across finance, artificial intelligence, cybersecurity, automation and strategy.</p></div>
+        </div>
+        <div class="credential-lede reveal">
+          <div></div>
+          <p>The point was never to collect badges. I use these programs to get closer to the vocabulary, workflows and judgment behind the things I’m trying to build. Featured first are the organizations and programs that have been most central to that learning.</p>
+        </div>
+
+        <div class="credential-grid stagger">
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><span class="credential-logo text-logo">JPMorganChase</span></div><span class="credential-rank">Finance</span></div></div>
+            <div><h3>Investment Banking</h3><div class="credential-org">JPMorganChase</div><div class="credential-meta">Issued Jun 2026 · ID 7a9MN9JW5fk6u2ypy</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/goldmansachs.svg" alt="Goldman Sachs logo"/></div><span class="credential-rank">Finance</span></div></div>
+            <div><h3>Risk</h3><div class="credential-org">Goldman Sachs</div><div class="credential-meta">Issued Jun 2026 · ID mYT2b4g4BsX6H2JXx</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><span class="credential-logo text-logo">IBM</span></div><span class="credential-rank">Cyber / AI</span></div></div>
+            <div><h3>Cybersecurity Fundamentals</h3><div class="credential-org">IBM</div><div class="credential-meta">Issued Jun 2026 · SkillsBuild</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/anthropic.svg" alt="Anthropic logo"/></div><span class="credential-rank">AI</span></div></div>
+            <div><h3>Model Context Protocol: Advanced Topics</h3><div class="credential-org">Anthropic · Claude Academy</div><div class="credential-meta">Issued Aug 2026 · ID bcff8fd230f6a5f2189b04b11f0765d7</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://academy.openai.com/public/certificate/r86flcvzho" target="_blank" rel="noopener">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><span class="credential-logo text-logo">OpenAI</span></div><span class="credential-rank">AI</span></div></div>
+            <div><h3>AI Foundations</h3><div class="credential-org">OpenAI Academy</div><div class="credential-meta">Issued Aug 2026 · ID r86flcvzho</div></div>
+            <div class="credential-linkline"><span>Open certificate</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><span class="credential-logo text-logo">Microsoft</span></div><span class="credential-rank">Automation</span></div></div>
+            <div><h3>Applied Skills: Power Automate</h3><div class="credential-org">Microsoft</div><div class="credential-meta">Issued Jun 2026 · ID A92F6510039FF9EC</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/bankofamerica.svg" alt="Bank of America logo"/></div><span class="credential-rank">Finance</span></div></div>
+            <div><h3>The Private Bank</h3><div class="credential-org">Bank of America</div><div class="credential-meta">Issued Jun 2026 · ID LXnFAoTJDCJxifA6o</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><span class="credential-logo text-logo">Citi</span></div><span class="credential-rank">Finance</span></div></div>
+            <div><h3>Investment Banking</h3><div class="credential-org">Citi</div><div class="credential-meta">Issued Jun 2026 · ID WcYpSefxLXroNKLur</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/mastercard.svg" alt="Mastercard logo"/></div><span class="credential-rank">Cyber</span></div></div>
+            <div><h3>Cybersecurity</h3><div class="credential-org">Mastercard</div><div class="credential-meta">Issued Jun 2026 · ID eQ9WwBEYbWMoG8jad</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><span class="credential-logo text-logo">CFI</span></div><span class="credential-rank">Finance</span></div></div>
+            <div><h3>Careers in Finance</h3><div class="credential-org">Corporate Finance Institute</div><div class="credential-meta">Issued Jan 2026 · ID 172664483</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/isc2.svg" alt="ISC2 logo"/></div><span class="credential-rank">Security</span></div></div>
+            <div><h3>ISC2 Candidate</h3><div class="credential-org">ISC2</div><div class="credential-meta">Issued May 2026 · Expires May 2028</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/hubspot.svg" alt="HubSpot logo"/></div><span class="credential-rank">Marketing</span></div></div>
+            <div><h3>Digital Marketing Certified</h3><div class="credential-org">HubSpot Academy</div><div class="credential-meta">Issued Jun 2026 · ID 2tqzrz06</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/anthropic.svg" alt="Anthropic logo"/></div><span class="credential-rank">AI</span></div></div>
+            <div><h3>Building with the Claude API</h3><div class="credential-org">Anthropic · Claude Academy</div><div class="credential-meta">Issued Aug 2026 · ID 24ca825013ccc5083c1ea45577ed28b0</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/anthropic.svg" alt="Anthropic logo"/></div><span class="credential-rank">AI</span></div></div>
+            <div><h3>AI Fluency: Framework & Foundations</h3><div class="credential-org">Anthropic · Claude Academy</div><div class="credential-meta">Issued Aug 2026 · ID 4695c0a172ecfdca9c19375453ae34fe</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/goldmansachs.svg" alt="Goldman Sachs logo"/></div><span class="credential-rank">Audit</span></div></div>
+            <div><h3>Internal Audit</h3><div class="credential-org">Goldman Sachs</div><div class="credential-meta">Issued Aug 2026 · ID 6a88b014be4748808e58cd87</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="Opens Shriyan's public LinkedIn credential listing">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><span class="credential-logo text-logo">PNC</span></div><span class="credential-rank">Finance</span></div></div>
+            <div><h3>Key Roles & Business Segments</h3><div class="credential-org">PNC</div><div class="credential-meta">Issued Aug 2026 · ID 6a890d45841fdedde7c5d2c3</div></div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+        </div>
+
+        <div class="credential-footer">
+          <span>Additional programs include IBM Generative AI & Data Fundamentals, Microsoft Generative AI, Goldman Sachs Controllers & Operations, Salesforce data comparison, LinkedIn AI/security coursework and Blue Ocean entrepreneurship.</span>
+          <a href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener">View all credentials ↗</a>
         </div>
       </div>
     </section>
 
     <section id="about" class="about">
       <div class="wrap about-grid reveal">
-        <div class="eyebrow">04 / About</div>
+        <div class="eyebrow">05 / About</div>
         <p class="about-copy">I don’t really have one lane. I tend to find a problem, open <em>way too many tabs</em>, and keep going until there’s something real enough for another person to use.</p>
         <div class="about-side"><p>That’s how a college-planning frustration became Scholark, finance curiosity became Capital Mastery, smart-glasses research became OpenLens, and questions about data ownership became DataShadow.</p><p>I’m still in high school, which mostly means I’m learning while building in public—and getting comfortable with the fact that those two things happen at the same time.</p><div class="learning-list" aria-label="Organizations represented in completed learning programs"><span>JPMorgan Chase</span><span>Goldman Sachs</span><span>Anthropic</span><span>IBM</span><span>OpenAI</span><span>Microsoft</span><span>Bank of America</span><span>Citi</span><span>Mastercard</span><span>CFI</span></div></div>
       </div>
@@ -438,7 +581,7 @@
 
     <section id="contact" class="contact">
       <div class="wrap contact-grid">
-        <div class="eyebrow" style="color:#312219">05 / Contact</div>
+        <div class="eyebrow" style="color:#312219">06 / Contact</div>
         <div>
           <h2>Have something worth building?</h2>
           <div class="contact-links">
@@ -466,10 +609,10 @@
         intro:'Scholark started from a frustration I understood personally: students bounce between calculators, admissions sites, prep forums and paid tools just to answer basic college-planning questions. I wanted one place that stayed free.',
         link:'https://sribyju.github.io/', cta:'Open Scholark',
         bullets:[
-          'Brings GPA tools, admissions research, college comparison, essays, SAT/ACT prep and AP study into one free platform.',
-          'Referenced at 10,000+ monthly users—turning a personal frustration into something used far beyond my own school.',
-          'Designed without a paywall so the useful layer is not reserved for students who can pay for another subscription.',
-          'Built as a real working toolkit rather than a landing-page concept, with multiple planning and study workflows in one product.'
+          'Brings GPA tools, admissions research, college comparison, essays, SAT/ACT prep and AP study into one completely free platform.',
+          'Surpassed 10,000 users, turning a personal frustration into a platform used far beyond my own school.',
+          'Includes 23 AP courses, 3,480 AP practice checks, 7,444 SAT/ACT questions and 50 full-size SAT/ACT simulations.',
+          'Also spans GPA and weighted-GPA tools, admissions planning, essay support, test-prep resources and 130 science experiment sets—without subscriptions or premium tiers.'
         ], significance:'The important part to me is not that it became “a college app.” It is that something I first built for myself became infrastructure other students could actually use.'
       },
       capital: {
@@ -477,8 +620,8 @@
         intro:'Capital Mastery is a free finance workforce-readiness platform built around a simple question: can someone actually perform role-specific finance work at a defensible standard?',
         link:'https://sribyju.github.io/CapitalMastery/', cta:'Open Capital Mastery',
         bullets:[
-          '16 finance career pathways spanning deals, investing, markets, corporate finance, clients/risk and real assets.',
-          'Role-native workbenches, calculations, source review, written work, spreadsheet-style tasks and professional simulations—not MCQ-only learning.',
+          '16 finance career pathways spanning investment banking, private equity, venture capital, corporate development, markets, FP&A, risk, wealth, real estate and more.',
+          '80+ free credentials/resources, role-native workbenches, calculations, source review, spreadsheet-style tasks and realistic finance simulations—not MCQ-only learning.',
           'A five-level evidence ladder, verifiable credentials and completion artifacts that emphasize demonstrated readiness.',
           'Employer organizations, cohorts, assignments, manager review, audit history and a Firm Layer for firm-specific terminology, resources and cases.',
           'Designed for pre-Day-1 readiness rather than as another generic finance-course library.'
