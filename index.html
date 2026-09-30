@@ -104,6 +104,18 @@
     .project-visual::after{content:'';position:absolute;inset:0;border:1px solid rgba(255,255,255,.18);border-radius:inherit;pointer-events:none}
     .project-visual img.cover{position:absolute;inset:0;display:block;width:100%;height:100%;margin:0;object-fit:cover;object-position:center;transition:transform .7s cubic-bezier(.2,.7,.2,1);filter:saturate(.92)}
     .project-visual:hover img.cover{transform:scale(1.035)}
+
+    .project-visual[data-project="scholark"]{background:#eee7db}
+    .project-visual[data-project="capital"]{background:#071525}
+    .project-visual[data-project="scholark"] img.cover,
+    .project-visual[data-project="capital"] img.cover{object-fit:contain;object-position:center;filter:none}
+    .project-visual[data-project="scholark"]:hover img.cover,
+    .project-visual[data-project="capital"]:hover img.cover{transform:scale(1.012)}
+    .project-visual[data-project="openlens"] img.cover{object-position:center}
+    .project-visual[data-project="datashadow"] img.cover,
+    .project-visual[data-project="dinksense"] img.cover{object-position:top center}
+    .project-visual[data-project="veyra"] img.cover{object-position:center}
+
     .project[data-project="scholark"] .project-visual,.project[data-project="capital"] .project-visual{aspect-ratio:1/1;background:#efe9df}
     .project[data-project="scholark"] .project-visual img.cover,.project[data-project="capital"] .project-visual img.cover{object-fit:contain;object-position:center;background:#f4efe7}
     .project[data-project="datashadow"] .project-visual img.cover,.project[data-project="dinksense"] .project-visual img.cover{object-position:center top}
@@ -386,7 +398,7 @@
             </div>
           </div>
           <button class="project-visual more-btn" data-project="dinksense" aria-label="Learn more about DinkSense">
-            <img class="cover" src="https://raw.githubusercontent.com/SriBYJU/DinkSense/main/dashboard-v1.7.png" alt="DinkSense dashboard preview" loading="lazy" />
+            <img class="cover" src="https://raw.githubusercontent.com/SriBYJU/DinkSense/main/dashboard.png" alt="DinkSense dashboard preview" loading="lazy" />
             <span class="visual-overlay"><span class="visual-label">Sports tech / PWA</span><span class="open-corner">↗</span></span>
           </button>
         </article>
@@ -582,7 +594,7 @@
         </div>
 
         <div class="credential-footer">
-          <span>Credential cards open the issuer/share page where a direct public link is available; otherwise they open my public LinkedIn credential listing. Additional programs include IBM Generative AI & Data Fundamentals, Microsoft Generative AI, Salesforce data comparison, LinkedIn AI/security coursework and Blue Ocean entrepreneurship.</span>
+          <span>Credential cards open the issuer/share page when a direct public URL is available; otherwise they open my LinkedIn Certifications section. Additional programs include IBM Generative AI & Data Fundamentals, Microsoft Generative AI, Salesforce data comparison, LinkedIn AI/security coursework and Blue Ocean entrepreneurship.</span>
           <a href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">View all credentials ↗</a>
         </div>
       </div>
@@ -603,7 +615,7 @@
           <h2>Have something worth building?</h2>
           <div class="contact-links">
             <a class="contact-link" href="mailto:avadhanula.shriyan@gmail.com"><span>avadhanula.shriyan@gmail.com</span><span>↗</span></a>
-            <a class="contact-link" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428" target="_blank" rel="noopener"><span>LinkedIn</span><span>↗</span></a>
+            <a class="contact-link" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener"><span>LinkedIn</span><span>↗</span></a>
             <a class="contact-link" href="https://github.com/SriBYJU" target="_blank" rel="noopener"><span>GitHub</span><span>↗</span></a>
           </div>
           <div class="footer-row"><span>Shriyan Avadhanula · Richmond, Virginia</span><a href="#top">Back to top ↑</a></div>
