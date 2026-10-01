@@ -152,6 +152,28 @@
     .athena-stat span{display:block;margin-top:6px;font:500 8px/1.35 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:#a8cdbd}
     @media(max-width:700px){.athena-stage{padding:24px}.athena-stage-name{font-size:31px}.athena-stats{grid-template-columns:repeat(3,1fr)}.athena-stat strong{font-size:23px}}
 
+
+    /* PATENT */
+    .patent{padding:96px 0;background:#efe9df;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .patent-shell{display:grid;grid-template-columns:190px minmax(0,1fr);gap:34px}
+    .patent-main{border-top:1px solid var(--ink);padding-top:24px}
+    .patent-topline{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:28px}
+    .patent-status{font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--orange)}
+    .patent-number{font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.06em;color:var(--ink-soft)}
+    .patent-main h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(46px,5.8vw,78px);line-height:.94;letter-spacing:-.045em;max-width:1000px;margin:0}
+    .patent-deck{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:48px;margin-top:34px;padding-top:28px;border-top:1px solid var(--line)}
+    .patent-deck p{margin:0;color:var(--ink-soft);font-size:14px;line-height:1.75;max-width:700px}
+    .patent-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+    .patent-fact{background:#efe9df;padding:16px 15px;min-height:84px}
+    .patent-fact strong{display:block;font-family:'Instrument Serif',serif;font-size:27px;font-weight:400;line-height:1.05}
+    .patent-fact span{display:block;margin-top:7px;font:500 8px/1.35 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft)}
+    .patent-title{margin-top:25px;font:500 9px/1.55 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.055em;color:var(--ink-soft);max-width:1050px}
+    .patent-systems{display:flex;flex-wrap:wrap;gap:8px;margin-top:23px}
+    .patent-systems span{border:1px solid var(--line-strong);padding:8px 10px;border-radius:999px;font:600 8px/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.055em}
+    .patent-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+    @media(max-width:900px){.patent-shell{grid-template-columns:1fr}.patent-deck{grid-template-columns:1fr}.patent-facts{max-width:640px}}
+    @media(max-width:600px){.patent{padding:72px 0}.patent-topline{align-items:flex-start;flex-direction:column;gap:8px}.patent-facts{grid-template-columns:1fr}.patent-fact{min-height:auto}}
+
     /* PRESS */
     .press{background:#1f1e1b;color:var(--paper);padding-bottom:105px;overflow:hidden}
     .press .section-head{padding-top:105px}
@@ -299,6 +321,7 @@
       <a class="brand" href="#top"><span class="brand-mark">SA</span><span>Shriyan Avadhanula</span></a>
       <div class="nav-links">
         <a href="#work">Work</a>
+        <a href="#patent">Patent</a>
         <a href="#press">Press</a>
         <a href="#credentials">Credentials</a>
         <a href="#about">About</a>
@@ -511,30 +534,64 @@
       </div>
     </section>
 
+
+    <section id="patent" class="patent">
+      <div class="wrap patent-shell">
+        <div class="eyebrow reveal">02 / Intellectual property</div>
+        <div class="patent-main reveal">
+          <div class="patent-topline">
+            <span class="patent-status">U.S. provisional patent application · patent pending</span>
+            <span class="patent-number">64/136,404</span>
+          </div>
+          <h2>DataShadow became more than a product.</h2>
+          <div class="patent-deck">
+            <p>Filed as sole inventor at age 16, the application covers DataShadow’s integrated architecture for giving individuals more control over how personal data is protected, permissioned, valued and managed. The same core systems described in the filing are reflected in the working prototype.</p>
+            <div class="patent-facts">
+              <div class="patent-fact"><strong>16</strong><span>Age at filing</span></div>
+              <div class="patent-fact"><strong>Sole</strong><span>Inventor</span></div>
+              <div class="patent-fact"><strong>Aug 19</strong><span>Filed · 2026</span></div>
+            </div>
+          </div>
+          <div class="patent-title">Autonomous Personal Data Asset Management System with Real-Time AI Negotiation, Data Poisoning Shield, Domain-Segmented Consent Architecture, Financial Portfolio Valuation, and Adaptive Portfolio Intelligence</div>
+          <div class="patent-systems" aria-label="Core systems described in the provisional filing">
+            <span>AI Negotiation Engine</span>
+            <span>Data Poisoning Shield</span>
+            <span>Consent Firewall</span>
+            <span>Financial Portfolio Layer</span>
+            <span>Adaptive Intelligence Layer</span>
+          </div>
+          <div class="patent-actions">
+            <a class="btn btn-dark" href="https://sribyju.github.io/DataShadow/" target="_blank" rel="noopener">Explore DataShadow ↗</a>
+            <button class="btn btn-quiet more-btn" data-project="datashadow">See the system</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="press" class="press">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">02 / Press & writing</div>
-          <div><h2>The work started traveling.</h2><p>Coverage across technology, education and international media. Every logo below opens the article or coverage page—not a homepage.</p></div>
+          <div class="eyebrow">03 / Press & writing</div>
+          <div><h2>The work started traveling.</h2><p>20+ national and international articles have covered me and my work. I’ve also authored or co-authored 4+ published pieces for outside outlets on education, accessibility and the systems I’m building. Every logo below opens the article or coverage page—not a homepage.</p></div>
         </div>
       </div>
       <div class="press-rail-wrap reveal">
         <div class="press-rail" id="pressRail" aria-label="Media coverage"></div>
       </div>
-      <div class="wrap press-note"><span>Hover to pause · click any outlet to read</span><span>20+ national & international publications</span></div>
+      <div class="wrap press-note"><span>Hover to pause · click any outlet to read</span><span>20+ articles about my work · 4+ bylined / co-bylined pieces</span></div>
     </section>
 
     <section class="beyond" id="experience">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">03 / Beyond the builds</div>
+          <div class="eyebrow">04 / Beyond the builds</div>
           <div><h2>What else shaped the way I work.</h2><p>The products matter, but so do the environments that changed how I think about risk, business, writing and learning.</p></div>
         </div>
         <div class="beyond-grid stagger">
           <article class="beyond-card"><div><div class="eyebrow">Cybersecurity exposure</div><h3>IBM</h3><p>Observed enterprise cybersecurity practices across penetration testing, vulnerability management, security assessments, risk management and enterprise security.</p></div><div class="mini">Observation & exposure — not represented as hands-on ownership</div></article>
           <article class="beyond-card"><div><div class="eyebrow">Finance & M&A</div><h3>Sterling Point Advisors</h3><p>M&A mentorship with a managing director helped ground Capital Mastery in what finance readiness looks like beyond textbook knowledge.</p></div><div class="mini">Mentorship · finance readiness · pre-onboarding context</div></article>
-          <article class="beyond-card"><div><div class="eyebrow">Writing & media</div><h3>Ideas in public</h3><p>Published writing and coverage across national and international outlets, plus letters and op-eds on technology, education and student innovation.</p></div><div class="mini">20+ publications · editorial writing · founder coverage</div></article>
-          <article class="beyond-card"><div><div class="eyebrow">Continuous learning</div><h3>30+ credentials across finance, AI & security.</h3><p>I use structured programs to learn the language, workflows and judgment behind the systems I build—from investment banking and risk to generative AI, automation and cybersecurity.</p></div><div class="mini"><a href="#credentials">JPMorganChase · Goldman Sachs · IBM · Anthropic · OpenAI →</a></div></article>
+          <article class="beyond-card"><div><div class="eyebrow">Writing & media</div><h3>Ideas in public</h3><p>20+ national and international articles have covered me and my work, alongside 4+ pieces I’ve authored or co-authored for outside publications on education, accessibility and technology.</p></div><div class="mini">20+ coverage articles · 4+ bylined / co-bylined pieces</div></article>
+          <article class="beyond-card"><div><div class="eyebrow">Continuous learning</div><h3>31 credentials across finance, AI & security.</h3><p>I use structured programs to learn the language, workflows and judgment behind the systems I build—from investment banking and risk to generative AI, automation and cybersecurity.</p></div><div class="mini"><a href="#credentials">JPMorganChase · Goldman Sachs · IBM · Anthropic · OpenAI →</a></div></article>
         </div>
       </div>
     </section>
@@ -543,7 +600,7 @@
     <section id="credentials" class="credentials">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">04 / Credentials</div>
+          <div class="eyebrow">05 / Credentials</div>
           <div><h2>Learning with receipts.</h2><p>31 public credentials across finance, artificial intelligence, cybersecurity, automation, data, marketing and entrepreneurship.</p></div>
         </div>
         <div class="credential-lede reveal">
@@ -1028,7 +1085,7 @@
 
     <section id="about" class="about">
       <div class="wrap about-grid reveal">
-        <div class="eyebrow">05 / About</div>
+        <div class="eyebrow">06 / About</div>
         <p class="about-copy">I don’t really have one lane. I tend to find a problem, open <em>way too many tabs</em>, and keep going until there’s something real enough for another person to use.</p>
         <div class="about-side"><p>That’s how a college-planning frustration became Scholark, finance curiosity became Capital Mastery, smart-glasses research became OpenLens, and questions about data ownership became DataShadow.</p><p>I’m still in high school, which mostly means I’m learning while building in public—and getting comfortable with the fact that those two things happen at the same time.</p><div class="learning-list" aria-label="Organizations represented in completed learning programs"><span>JPMorgan Chase</span><span>Goldman Sachs</span><span>Anthropic</span><span>IBM</span><span>OpenAI</span><span>Microsoft</span><span>Bank of America</span><span>Citi</span><span>Mastercard</span><span>CFI</span></div></div>
       </div>
@@ -1036,7 +1093,7 @@
 
     <section id="contact" class="contact">
       <div class="wrap contact-grid">
-        <div class="eyebrow" style="color:#312219">06 / Contact</div>
+        <div class="eyebrow" style="color:#312219">07 / Contact</div>
         <div>
           <h2>Have something worth building?</h2>
           <div class="contact-links">
