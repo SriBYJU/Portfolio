@@ -200,7 +200,11 @@
     .credential-logo[src*="jpmorgan-user"]{max-height:40px;border-radius:3px}
     .credential-logo[src*="goldman-user"]{max-height:40px}
     .credential-logo[src*="anthropic-user"],.credential-logo[src*="openai-user"]{max-height:31px}
-    .credential-logo[src$="cfi.svg"],.credential-logo[src$="pnc.svg"],.credential-logo[src$="microsoft.svg"],.credential-logo[src$="citi.svg"]{max-height:30px}
+    .credential-logo[src$="pnc.svg"],.credential-logo[src$="microsoft.svg"],.credential-logo[src$="citi.svg"]{max-height:30px}
+    /* CFI's mark is white artwork, so give it a dark plate instead of white-on-white. */
+    .credential-logo[src$="cfi.svg"]{box-sizing:border-box;width:100%;max-width:100%;max-height:40px;padding:7px 10px;border-radius:4px;background:#123447;object-position:center}
+    /* Add a touch of breathing room for monochrome marks so they remain legible on bright displays. */
+    .credential-logo[src$="isc2.svg"],.credential-logo[src$="hubspot.svg"],.credential-logo[src$="bank-of-america.svg"],.credential-logo[src*="anthropic-user"],.credential-logo[src*="openai-user"]{padding:2px}
     .credential-rank{font:500 9px/1 'IBM Plex Mono',monospace;color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase}
     .credential-card h3{font-family:'Instrument Serif',serif;font-size:29px;font-weight:400;line-height:1.02;letter-spacing:-.025em;margin:0 0 8px}
     .credential-org{font-size:11px;font-weight:700;color:var(--ink);margin-bottom:7px}
