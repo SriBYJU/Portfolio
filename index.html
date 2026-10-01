@@ -138,6 +138,9 @@
     .brand-stage.sport{background:linear-gradient(160deg,#254b2c,#92ad4d)}
     .brand-stage.fitness{background:linear-gradient(160deg,#f0d5c3,#b65d53)}
     .project-note{margin-top:14px;font:400 10px/1.5 'IBM Plex Mono',monospace;color:var(--ink-soft)}
+    .project-note strong{font-weight:800;color:var(--ink)}
+    .project-callout{margin:14px 0 2px;padding:11px 13px;border-left:2px solid var(--orange);background:rgba(224,105,65,.07);font-size:12px;line-height:1.55;color:var(--ink)}
+    .project-callout strong{font-weight:800}
 
 
     .athena-stage{position:absolute;inset:0;padding:34px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#0d1714 0%,#152a22 55%,#0b1210 100%);color:#f4f2ea;text-align:left}
@@ -167,6 +170,9 @@
     .patent-fact{background:#efe9df;padding:16px 15px;min-height:84px}
     .patent-fact strong{display:block;font-family:'Instrument Serif',serif;font-size:27px;font-weight:400;line-height:1.05}
     .patent-fact span{display:block;margin-top:7px;font:500 8px/1.35 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft)}
+    .patent-shot{margin:34px 0 4px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 16px 38px rgba(28,24,18,.07)}
+    .patent-shot img{display:block;width:100%;height:auto}
+    .patent-shot figcaption{padding:10px 14px;border-top:1px solid var(--line);font:500 8px/1.45 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);background:#f6f1e8}
     .patent-title{margin-top:25px;font:500 9px/1.55 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.055em;color:var(--ink-soft);max-width:1050px}
     .patent-systems{display:flex;flex-wrap:wrap;gap:8px;margin-top:23px}
     .patent-systems span{border:1px solid var(--line-strong);padding:8px 10px;border-radius:999px;font:600 8px/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.055em}
@@ -233,7 +239,8 @@
     .credential-logo[src$="isc2.svg"]{max-height:40px}
     .credential-logo[src$="hubspot.svg"]{max-height:40px}
     .credential-logo[src$="cfi.svg"]{max-height:40px;filter:invert(1)}
-    .credential-logo[src*="linkedin-learning-logo"]{max-height:52px;max-width:190px;object-fit:contain;object-position:left center}
+    .credential-logo-wrap-linkedin{height:64px;width:190px;overflow:hidden;align-items:center}
+    .credential-logo-linkedin{width:180px;height:64px;max-width:none;max-height:none;object-fit:cover;object-position:center 48%;margin-left:-2px}
     .credential-logo-blueocean{width:92px;max-height:50px;mix-blend-mode:multiply;object-position:center}
 
     .credential-rank{font:500 9px/1 'IBM Plex Mono',monospace;color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase}
@@ -378,7 +385,7 @@
             </div>
             <div>
               <div class="project-meta"><a class="btn btn-dark" href="https://sribyju.github.io/" target="_blank" rel="noopener">Open website ↗</a><button class="btn btn-quiet more-btn" data-project="scholark">Tell me more</button></div>
-              <div class="project-note">10K+ users · 23 AP courses · 7,444 SAT/ACT questions · 50 full-size simulations</div>
+              <div class="project-note"><strong>10K+ users</strong> · <strong>23 AP courses</strong> · <strong>7,444 SAT/ACT questions</strong> · <strong>50 full-size simulations</strong></div>
             </div>
           </div>
           <button class="project-visual more-btn" data-project="scholark" aria-label="Learn more about Scholark">
@@ -397,7 +404,7 @@
             </div>
             <div>
               <div class="project-meta"><a class="btn btn-dark" href="https://sribyju.github.io/CapitalMastery/" target="_blank" rel="noopener">Open website ↗</a><button class="btn btn-quiet more-btn" data-project="capital">Tell me more</button></div>
-              <div class="project-note">80+ free credentials · 16 finance pathways · real-world simulations · employer layer</div>
+              <div class="project-note"><strong>80+ free credentials</strong> · <strong>16 finance pathways</strong> · real-world simulations · employer layer</div>
             </div>
           </div>
           <button class="project-visual more-btn" data-project="capital" aria-label="Learn more about Capital Mastery">
@@ -415,6 +422,7 @@
               <p>A development, simulation, research and benchmarking environment for building and testing smart-glasses experiences without needing a physical device.</p>
             </div>
             <div>
+              <div class="project-callout"><strong>Invited to one of the largest AI/AR smart-glasses expos in the world in Shenzhen, China.</strong></div>
               <div class="project-meta"><a class="btn btn-dark" href="https://sribyju.github.io/OpenLens/" target="_blank" rel="noopener">Open app ↗</a><button class="btn btn-quiet more-btn" data-project="openlens">Tell me more</button></div>
               <div class="project-note">Scenario Studio · Optical Twin · Device Universe · local AI</div>
             </div>
@@ -435,7 +443,7 @@
             </div>
             <div>
               <div class="project-meta"><a class="btn btn-dark" href="https://sribyju.github.io/DataShadow/" target="_blank" rel="noopener">Open app ↗</a><button class="btn btn-quiet more-btn" data-project="datashadow">Tell me more</button></div>
-              <div class="project-note">U.S. provisional patent filed Aug. 19, 2026 · patent pending</div>
+              <div class="project-note"><strong>U.S. provisional patent 64/136,404</strong> · <strong>filed at 16</strong> · Aug. 19, 2026 · patent pending</div>
             </div>
           </div>
           <button class="project-visual more-btn" data-project="datashadow" aria-label="Learn more about DataShadow">
@@ -455,7 +463,7 @@
             </div>
             <div>
               <div class="project-meta"><a class="btn btn-dark" href="https://nikithamallojhala-ctrl.github.io/Athena/" target="_blank" rel="noopener">Open ATHENA ↗</a><button class="btn btn-quiet more-btn" data-project="athena">Tell me more</button></div>
-              <div class="project-note">27,548 athletes analyzed · 155,109 real-world race records · 65,895 longitudinal sequences</div>
+              <div class="project-note"><strong>27,548 athletes analyzed</strong> · <strong>155,109 race records</strong> · <strong>65,895 longitudinal sequences</strong></div>
             </div>
           </div>
           <button class="project-visual more-btn" data-project="athena" aria-label="Learn more about ATHENA OS">
@@ -552,6 +560,10 @@
               <div class="patent-fact"><strong>Aug 19</strong><span>Filed · 2026</span></div>
             </div>
           </div>
+          <figure class="patent-shot reveal">
+            <img src="assets/datashadow-patent-filing.png" alt="DataShadow U.S. provisional patent filing overview showing application number 64/136,404 and the filed date of August 19, 2026" loading="lazy" />
+            <figcaption>DataShadow · U.S. provisional patent application 64/136,404 · filed Aug. 19, 2026</figcaption>
+          </figure>
           <div class="patent-title">Autonomous Personal Data Asset Management System with Real-Time AI Negotiation, Data Poisoning Shield, Domain-Segmented Consent Architecture, Financial Portfolio Valuation, and Adaptive Portfolio Intelligence</div>
           <div class="patent-systems" aria-label="Core systems described in the provisional filing">
             <span>AI Negotiation Engine</span>
@@ -973,7 +985,7 @@
           <a class="credential-card" href="https://www.linkedin.com/learning/certificates/33e3843af7c8c890cdbdacbca39c0b62386e9b4b9a22077b6db4aad62ac80826/" target="_blank" rel="noopener">
             <div>
               <div class="credential-top">
-                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
                 <span class="credential-rank">AI</span>
               </div>
             </div>
@@ -988,7 +1000,7 @@
           <a class="credential-card" href="https://www.linkedin.com/learning/certificates/9ff036df1384a30050f937da9e080138ffeeab8a9f117b2dc241b626fe4abba9/" target="_blank" rel="noopener">
             <div>
               <div class="credential-top">
-                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
                 <span class="credential-rank">Security</span>
               </div>
             </div>
@@ -1003,7 +1015,7 @@
           <a class="credential-card" href="https://www.linkedin.com/learning/certificates/b46d5c4e38ba04c21c2b811885a67aba0968e3ea8871632397d7ad8e22037296/" target="_blank" rel="noopener">
             <div>
               <div class="credential-top">
-                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
                 <span class="credential-rank">Finance</span>
               </div>
             </div>
@@ -1018,7 +1030,7 @@
           <a class="credential-card" href="https://www.linkedin.com/learning/certificates/8a80b9122ae6fa76d0115ba2f66fb3207fbea81a4ce08529fee1a7449c2a4529/" target="_blank" rel="noopener">
             <div>
               <div class="credential-top">
-                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
                 <span class="credential-rank">AI</span>
               </div>
             </div>
@@ -1033,7 +1045,7 @@
           <a class="credential-card" href="https://www.linkedin.com/learning/certificates/2a6b760f96bfa21abf72c60b7cfbea9945383e0173843dadba0d99e198500514/" target="_blank" rel="noopener">
             <div>
               <div class="credential-top">
-                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
                 <span class="credential-rank">AI</span>
               </div>
             </div>
@@ -1122,8 +1134,8 @@
         link:'https://sribyju.github.io/', cta:'Open Scholark',
         bullets:[
           'Brings GPA tools, admissions research, college comparison, essays, SAT/ACT prep and AP study into one completely free platform.',
-          'Surpassed 10,000 users, turning a personal frustration into a platform used far beyond my own school.',
-          'Includes 23 AP courses, 3,480 AP practice checks, 7,444 SAT/ACT questions and 50 full-size SAT/ACT simulations.',
+          '<strong>Surpassed 10,000 users</strong>, turning a personal frustration into a platform used far beyond my own school.',
+          'Includes <strong>23 AP courses</strong>, <strong>3,480 AP practice checks</strong>, <strong>7,444 SAT/ACT questions</strong> and <strong>50 full-size SAT/ACT simulations</strong>.',
           'Also spans GPA and weighted-GPA tools, admissions planning, essay support, test-prep resources and 130 science experiment sets—without subscriptions or premium tiers.'
         ], significance:'The important part to me is not that it became “a college app.” It is that something I first built for myself became infrastructure other students could actually use.'
       },
@@ -1132,8 +1144,8 @@
         intro:'Capital Mastery is a free finance workforce-readiness platform built around a simple question: can someone actually perform role-specific finance work at a defensible standard?',
         link:'https://sribyju.github.io/CapitalMastery/', cta:'Open Capital Mastery',
         bullets:[
-          '16 finance career pathways spanning investment banking, private equity, venture capital, corporate development, markets, FP&A, risk, wealth, real estate and more.',
-          '80+ free credentials/resources, role-native workbenches, calculations, source review, spreadsheet-style tasks and realistic finance simulations—not MCQ-only learning.',
+          '<strong>16 finance career pathways</strong> spanning investment banking, private equity, venture capital, corporate development, markets, FP&A, risk, wealth, real estate and more.',
+          '<strong>80+ free credentials/resources</strong>, role-native workbenches, calculations, source review, spreadsheet-style tasks and realistic finance simulations—not MCQ-only learning.',
           'A five-level evidence ladder, verifiable credentials and completion artifacts that emphasize demonstrated readiness.',
           'Employer organizations, cohorts, assignments, manager review, audit history and a Firm Layer for firm-specific terminology, resources and cases.',
           'Designed for pre-Day-1 readiness rather than as another generic finance-course library.'
@@ -1146,6 +1158,7 @@
         bullets:[
           'Scenario Studio and Lens Lab let developers compile and run smart-glasses experiences against a deterministic Optical Twin.',
           'Device Universe keeps sourced profiles for eight devices and makes unknowns or source conflicts explicit instead of inventing compatibility.',
+          '<strong>Invited to one of the largest AI/AR smart-glasses expos in the world in Shenzhen, China.</strong>',
           'Device Doctor, Device Fit and benchmark tools expose blockers, capability boundaries, failures, traces and replayable artifacts.',
           'Local AI paths support browser-side OCR and transparent processing routes without requiring a hidden cloud model.',
           'The broader OpenLens work helped lead to an invitation to a major AI/AR smart-glasses event in Shenzhen, China.'
@@ -1168,8 +1181,8 @@
         intro:'ATHENA OS is a local-first athlete-intelligence and research platform I co-created as an equal 50/50 collaboration. It combines event-specific track & field tools, longitudinal athlete-state modeling, explicit uncertainty, reproducible evidence and conservative health communication support.',
         link:'https://nikithamallojhala-ctrl.github.io/Athena/', cta:'Open ATHENA',
         bullets:[
-          'Primary performance analysis spans 27,548 athletes, 155,109 real-world race records and 65,895 longitudinal prediction sequences.',
-          'Covers 18+ track & field disciplines with sprint pacing, hurdle rhythm, relay ordering, jump/throw logging and event-aware planning tools.',
+          'Primary performance analysis spans <strong>27,548 athletes</strong>, <strong>155,109 real-world race records</strong> and <strong>65,895 longitudinal prediction sequences</strong>.',
+          'Covers <strong>18+ track & field disciplines</strong> with sprint pacing, hurdle rhythm, relay ordering, jump/throw logging and event-aware planning tools.',
           'The state engine combines individual baselines, current observations, event context, longitudinal history and visible confidence instead of hiding everything behind a single score.',
           'Pallas provides local assistant functions without requiring athlete data to be sent to a remote chatbot; the platform is explicit about when evidence is insufficient.',
           'Research mode exposes rolling validation, model hierarchy, ablations, stress tests, failure analysis, prospective protocol locking and claim-to-artifact integrity checks.',
