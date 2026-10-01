@@ -139,6 +139,19 @@
     .brand-stage.fitness{background:linear-gradient(160deg,#f0d5c3,#b65d53)}
     .project-note{margin-top:14px;font:400 10px/1.5 'IBM Plex Mono',monospace;color:var(--ink-soft)}
 
+
+    .athena-stage{position:absolute;inset:0;padding:34px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#0d1714 0%,#152a22 55%,#0b1210 100%);color:#f4f2ea;text-align:left}
+    .athena-stage::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 82% 16%,rgba(120,239,180,.17),transparent 34%);pointer-events:none}
+    .athena-stage-top{position:relative;display:flex;align-items:center;gap:14px;z-index:1}
+    .athena-stage img{width:54px;height:54px;object-fit:contain;filter:brightness(0) invert(1)}
+    .athena-stage-name{font-family:'Instrument Serif',serif;font-size:38px;letter-spacing:-.035em}
+    .athena-stage-kicker{position:relative;z-index:1;font:500 10px/1.4 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.1em;color:#a8cdbd}
+    .athena-stage-title{position:relative;z-index:1;font-family:'Instrument Serif',serif;font-size:clamp(38px,4vw,62px);line-height:.95;letter-spacing:-.04em;max-width:500px;margin:10px 0 22px}
+    .athena-stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px}
+    .athena-stat strong{display:block;font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;line-height:1}
+    .athena-stat span{display:block;margin-top:6px;font:500 8px/1.35 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:#a8cdbd}
+    @media(max-width:700px){.athena-stage{padding:24px}.athena-stage-name{font-size:31px}.athena-stats{grid-template-columns:repeat(3,1fr)}.athena-stat strong{font-size:23px}}
+
     /* PRESS */
     .press{background:#1f1e1b;color:var(--paper);padding-bottom:105px;overflow:hidden}
     .press .section-head{padding-top:105px}
@@ -177,6 +190,9 @@
     .credential-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-left:1px solid var(--line);border-top:1px solid var(--line)}
     .credential-card{min-height:230px;padding:26px 24px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:24px;background:rgba(255,255,255,.22);transition:background .22s ease,transform .22s ease}
     .credential-card:hover{background:#f7f3eb;transform:translateY(-2px)}
+    .credential-card-pending{cursor:default;opacity:.88}
+    .credential-card-pending:hover{transform:none;background:rgba(255,255,255,.22)}
+    .credential-card-pending .credential-linkline{color:var(--ink-soft)}
     .credential-top{display:flex;align-items:center;justify-content:space-between;gap:18px}
     .credential-logo-wrap{height:34px;max-width:148px;display:flex;align-items:center}
     .credential-logo{max-width:100%;max-height:30px;object-fit:contain;object-position:left center}
@@ -388,8 +404,39 @@
           </button>
         </article>
 
-        <article class="project reveal" data-project="dinksense">
+
+        <article class="project reveal" data-project="athena">
           <div class="project-index">05</div>
+          <div class="project-copy">
+            <div>
+              <div class="project-brand"><img class="mark" src="https://raw.githubusercontent.com/nikithamallojhala-ctrl/Athena/main/assets/athena-mark.svg" alt="ATHENA OS logo"/><span class="wordmark">ATHENA OS</span></div>
+              <h3>Model the athlete as a changing system.</h3>
+              <p>A privacy-first athlete-intelligence and research platform combining dynamic athlete-state modeling, track & field tools, transparent evidence, health awareness and local-first design.</p>
+            </div>
+            <div>
+              <div class="project-meta"><a class="btn btn-dark" href="https://nikithamallojhala-ctrl.github.io/Athena/" target="_blank" rel="noopener">Open ATHENA ↗</a><button class="btn btn-quiet more-btn" data-project="athena">Tell me more</button></div>
+              <div class="project-note">27,548 athletes analyzed · 155,109 real-world race records · 65,895 longitudinal sequences</div>
+            </div>
+          </div>
+          <button class="project-visual more-btn" data-project="athena" aria-label="Learn more about ATHENA OS">
+            <span class="athena-stage">
+              <span class="athena-stage-top"><img src="https://raw.githubusercontent.com/nikithamallojhala-ctrl/Athena/main/assets/athena-mark.svg" alt=""/><span class="athena-stage-name">ATHENA OS</span></span>
+              <span>
+                <span class="athena-stage-kicker">Adaptive athlete-state intelligence</span>
+                <span class="athena-stage-title">Evidence, performance and athlete context in one system.</span>
+                <span class="athena-stats">
+                  <span class="athena-stat"><strong>27,548</strong><span>athletes analyzed</span></span>
+                  <span class="athena-stat"><strong>155,109</strong><span>race records</span></span>
+                  <span class="athena-stat"><strong>18+</strong><span>track disciplines</span></span>
+                </span>
+              </span>
+            </span>
+            <span class="visual-overlay"><span class="visual-label">Athlete intelligence / Research</span><span class="open-corner">↗</span></span>
+          </button>
+        </article>
+
+        <article class="project reveal" data-project="dinksense">
+          <div class="project-index">06</div>
           <div class="project-copy">
             <div>
               <div class="project-brand"><img class="mark" src="https://raw.githubusercontent.com/SriBYJU/DinkSense/main/icon.svg" alt="DinkSense logo"/><span class="wordmark">DinkSense</span></div>
@@ -408,7 +455,7 @@
         </article>
 
         <article class="project reveal" data-project="veyra">
-          <div class="project-index">06</div>
+          <div class="project-index">07</div>
           <div class="project-copy">
             <div>
               <div class="project-brand"><img class="mark" src="https://raw.githubusercontent.com/SriBYJU/Veyra/main/assets/icon-192.png" alt="Veyra logo"/><span class="wordmark">Veyra</span></div>
@@ -427,7 +474,7 @@
         </article>
 
         <article class="project reveal" data-project="cascade">
-          <div class="project-index">07</div>
+          <div class="project-index">08</div>
           <div class="project-copy">
             <div>
               <div class="project-brand"><span class="wordmark">Cascade</span></div>
@@ -488,29 +535,29 @@
         </div>
 
         <div class="credential-grid stagger">
-          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Logo_of_JPMorganChase_2024.svg" alt="JPMorganChase logo"/></div><span class="credential-rank">Finance</span></div></div>
+          <div class="credential-card credential-card-pending" data-credential="Investment Banking" data-issuer="JPMorganChase">
+            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://logo.clearbit.com/pnc.com" alt="PNC logo" loading="lazy"/></div><span class="credential-rank">Finance</span></div></div>
             <div><h3>Investment Banking</h3><div class="credential-org">JPMorganChase</div><div class="credential-meta">Issued Jun 2026 · ID 7a9MN9JW5fk6u2ypy</div></div>
-            <div class="credential-linkline"><span>View on LinkedIn</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://url2659.theforage.com/ss/c/u001.s_sGhHZ4QCXbguVWDSNEorJM2C7M7U802rhCaaeKez099eygpHkPtf4h9VDDmeiYLc3zUrGrxJY0v2AHye6SVwBzu5WDgITj8f5meTjQ8QX29ofYObRhAkjjCSWFlpHVUyyV2qKHj26HmAPLAgCOzICkXXw85V-rxEGmnvMjj1AcZNN20_LNOHYuTqDhwJiCEahNX_U4XUIxvKPSUmAp6WeSH0eJ1lm5P1pCzP1G9RpJIOSClAJ2UTFmS5aToWERTWTz0XIx8rZfnYKO9mTpHg/4r4/CFKkDTknRRG71lUkhglGSA/h2/h001.RKEWKHuSntBnrke0MFn8XWN_uCEBZ5h9zGuNvRd6nM4" target="_blank" rel="noopener">
+          <div class="credential-card credential-card-pending" data-credential="Risk" data-issuer="Goldman Sachs">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/goldmansachs.svg" alt="Goldman Sachs logo"/></div><span class="credential-rank">Finance</span></div></div>
             <div><h3>Risk</h3><div class="credential-org">Goldman Sachs</div><div class="credential-meta">Issued Jun 2026 · ID mYT2b4g4BsX6H2JXx</div></div>
-            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">
+          <div class="credential-card credential-card-pending" data-credential="Cybersecurity Fundamentals" data-issuer="IBM">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/IBM_logo.svg" alt="IBM logo"/></div><span class="credential-rank">Cyber / AI</span></div></div>
             <div><h3>Cybersecurity Fundamentals</h3><div class="credential-org">IBM</div><div class="credential-meta">Issued Jun 2026 · SkillsBuild</div></div>
-            <div class="credential-linkline"><span>View on LinkedIn</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">
+          <div class="credential-card credential-card-pending" data-credential="Model Context Protocol: Advanced Topics" data-issuer="Anthropic · Claude Academy">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/anthropic.svg" alt="Anthropic logo"/></div><span class="credential-rank">AI</span></div></div>
             <div><h3>Model Context Protocol: Advanced Topics</h3><div class="credential-org">Anthropic · Claude Academy</div><div class="credential-meta">Issued Aug 2026 · ID bcff8fd230f6a5f2189b04b11f0765d7</div></div>
-            <div class="credential-linkline"><span>View on LinkedIn</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
           <a class="credential-card" href="https://academy.openai.com/public/certificate/r86flcvzho" target="_blank" rel="noopener">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/OpenAI_logo_2025_(wordmark).svg" alt="OpenAI logo"/></div><span class="credential-rank">AI</span></div></div>
@@ -524,35 +571,35 @@
             <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
           </a>
 
-          <a class="credential-card" href="https://url2659.theforage.com/ss/c/u001.s_sGhHZ4QCXbguVWDSNEorJM2C7M7U802rhCaaeKez099eygpHkPtf4h9VDDmeiYLc3zUrGrxJY0v2AHye6SV1fisHrsl_TYqEABfE3R0MvUJ0CD0Hh_WJsloov6UIAAgFbBYeH0T3ak4t_oSiG0zlEfS4Od-1u-MTKFspHmadzE3P_nz5R5wSWeapyZ4W4EBQQKLgjRyEPhuYnxolJQPgJkKCFnDEtQ5gfRYQ-_ls__tMu_KJLsX5_2LAYfGyqUHZvffuzeJWIyht5V1KemgA/4r8/ecMgYP-fTES-ekZFBcbvCQ/h1/h001.YL2N0duLEzqAn7pDGMFKsPmN8tbw2vsSMJ3yMCm8wC8" target="_blank" rel="noopener">
+          <div class="credential-card credential-card-pending" data-credential="The Private Bank" data-issuer="Bank of America">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/bankofamerica.svg" alt="Bank of America logo"/></div><span class="credential-rank">Finance</span></div></div>
             <div><h3>The Private Bank</h3><div class="credential-org">Bank of America</div><div class="credential-meta">Issued Jun 2026 · ID LXnFAoTJDCJxifA6o</div></div>
-            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">
+          <div class="credential-card credential-card-pending" data-credential="Investment Banking" data-issuer="Citi">
             <div><div class="credential-top"><div class="credential-logo-wrap"><span class="credential-logo text-logo">Citi</span></div><span class="credential-rank">Finance</span></div></div>
             <div><h3>Investment Banking</h3><div class="credential-org">Citi</div><div class="credential-meta">Issued Jun 2026 · ID WcYpSefxLXroNKLur</div></div>
-            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://url2659.theforage.com/ss/c/u001.s_sGhHZ4QCXbguVWDSNEorJM2C7M7U802rhCaaeKez099eygpHkPtf4h9VDDmeiYLc3zUrGrxJY0v2AHye6SV-PiQDzmyX3kkkRLlQRxNjhpk5PWUkYJXmpoe-zTiSofoAE4KspzuUZvBc4e5TfB17WpSt6zZYClJsRauCwSQdxagl_0x_HsGQbsacJOO3MZBCk0JMNB4nfGC3ujj7AEoHChC48_tDRJcVN-mAwyHM6sDsybaPoPTM2925Lwk15Jkcw6dgxyWYl3Uv1lRDnYkA/4r6/srpodPPESJC_z52kvvE3fg/h2/h001.A4bfrLJ-p62vRsMB9PgHhh7MagKWWQhniQ8EH_3Lm7A" target="_blank" rel="noopener">
+          <div class="credential-card credential-card-pending" data-credential="Cybersecurity" data-issuer="Mastercard">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/mastercard.svg" alt="Mastercard logo"/></div><span class="credential-rank">Cyber</span></div></div>
             <div><h3>Cybersecurity</h3><div class="credential-org">Mastercard</div><div class="credential-meta">Issued Jun 2026 · ID eQ9WwBEYbWMoG8jad</div></div>
-            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">
+          <div class="credential-card credential-card-pending" data-credential="Careers in Finance" data-issuer="Corporate Finance Institute">
             <div><div class="credential-top"><div class="credential-logo-wrap"><span class="credential-logo text-logo">CFI</span></div><span class="credential-rank">Finance</span></div></div>
             <div><h3>Careers in Finance</h3><div class="credential-org">Corporate Finance Institute</div><div class="credential-meta">Issued Jan 2026 · ID 172664483</div></div>
-            <div class="credential-linkline"><span>View on LinkedIn</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">
+          <div class="credential-card credential-card-pending" data-credential="ISC2 Candidate" data-issuer="ISC2">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/isc2.svg" alt="ISC2 logo"/></div><span class="credential-rank">Security</span></div></div>
             <div><h3>ISC2 Candidate</h3><div class="credential-org">ISC2</div><div class="credential-meta">Issued May 2026 · Expires May 2028</div></div>
-            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
           <a class="credential-card" href="https://app-na2.hubspot.com/academy/achievements/2tqzrz06/en/1/shriyan-avadhanula/digital-marketing-certified" target="_blank" rel="noopener">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/hubspot.svg" alt="HubSpot logo"/></div><span class="credential-rank">Marketing</span></div></div>
@@ -560,45 +607,45 @@
             <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
           </a>
 
-          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">
+          <div class="credential-card credential-card-pending" data-credential="Building with the Claude API" data-issuer="Anthropic · Claude Academy">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/anthropic.svg" alt="Anthropic logo"/></div><span class="credential-rank">AI</span></div></div>
             <div><h3>Building with the Claude API</h3><div class="credential-org">Anthropic · Claude Academy</div><div class="credential-meta">Issued Aug 2026 · ID 24ca825013ccc5083c1ea45577ed28b0</div></div>
-            <div class="credential-linkline"><span>View on LinkedIn</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">
+          <div class="credential-card credential-card-pending" data-credential="AI Fluency: Framework & Foundations" data-issuer="Anthropic · Claude Academy">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/anthropic.svg" alt="Anthropic logo"/></div><span class="credential-rank">AI</span></div></div>
             <div><h3>AI Fluency: Framework & Foundations</h3><div class="credential-org">Anthropic · Claude Academy</div><div class="credential-meta">Issued Aug 2026 · ID 4695c0a172ecfdca9c19375453ae34fe</div></div>
-            <div class="credential-linkline"><span>View on LinkedIn</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://url2659.theforage.com/ss/c/u001.s_sGhHZ4QCXbguVWDSNEorJM2C7M7U802rhCaaeKez099eygpHkPtf4h9VDDmeiYLc3zUrGrxJY0v2AHye6SVxBzEVRm22GWwkjAWLP9sQsPSMtGtoVAeMGy8QUKFWJfec49Oj4u1tnettWjp_In9-azwlMlNkCY-TKicwN5y5YWAK9SNqdrRctS_ftKASu1ihJEROhGMlmpsFA2sXtor8cAsJqEfgI2U_Cx3AB8EqH6Mmp063vWzKCLI9-3iMInKb3655KLK8STRvsy55NH5A/4td/LpkuAI3NRUazzvdMt03IqA/h1/h001.eHT9APZcUSTi2r7Y1Bs3Ymiz0dMDsedd5tN2Cje9624" target="_blank" rel="noopener">
+          <div class="credential-card credential-card-pending" data-credential="Internal Audit" data-issuer="Goldman Sachs">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/goldmansachs.svg" alt="Goldman Sachs logo"/></div><span class="credential-rank">Audit</span></div></div>
             <div><h3>Internal Audit</h3><div class="credential-org">Goldman Sachs</div><div class="credential-meta">Issued Aug 2026 · ID 6a88b014be4748808e58cd87</div></div>
-            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://url2659.theforage.com/ss/c/u001.s_sGhHZ4QCXbguVWDSNEorJM2C7M7U802rhCaaeKez099eygpHkPtf4h9VDDmeiYLc3zUrGrxJY0v2AHye6SVwhfzvqOdNvLh_piQ1EPbc-TzeMoQb1HVvh6sDCsJjGtp3i2irKUWtUBiTza5wFZC3YCQPRdPlZHN7SDyVYpjfTeDlFaB6GIFOXSLBKeR7Avgg631ImYiXpRirDclEuGWX58FyoaqjMtpOHBhvOUCxnWcLE5NPU2HpiLhXLt3EqSIBnlqFlxsU1YRgyzac3oBw/4r4/HEXsOuMiRA6QyTzpxIMH6g/h2/h001.bKEWY3zyiy64K2PU8OmWVclO15H40ofc8xSk6IBPtv0" target="_blank" rel="noopener">
+          <div class="credential-card credential-card-pending" data-credential="Operations" data-issuer="Goldman Sachs">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/goldmansachs.svg" alt="Goldman Sachs logo"/></div><span class="credential-rank">Operations</span></div></div>
             <div><h3>Operations</h3><div class="credential-org">Goldman Sachs</div><div class="credential-meta">Issued Jun 2026 · ID 3FcZvQZQt3yi8qFqb</div></div>
-            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://url2659.theforage.com/ss/c/u001.s_sGhHZ4QCXbguVWDSNEorJM2C7M7U802rhCaaeKez099eygpHkPtf4h9VDDmeiYLc3zUrGrxJY0v2AHye6SV26s8TYwLvZaKKIL7_fiLOPxCfb0h2yJYduFsw6pZjMxu3ctraimMahHUjV3YTE9sF3spNwxfnX8Um3pVlV_C8E6B08YwCdTUuG7a99E4U5xuOcvrMaGuaW5NZZ1M65R2kqWANlljpp-08-iA47c6KJ-CQwW4-NT3N9Ly2AzBtNJmPU7vsEx2s36lEXV8wGR8w/4t3/bRrt4DUMRTyawDQivRrtmw/h1/h001.SIzMwOryg91ltKQEz2wjzq1tSl_4tqCw5MD-omdlWS8" target="_blank" rel="noopener">
+          <div class="credential-card credential-card-pending" data-credential="Controllers" data-issuer="Goldman Sachs">
             <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16/icons/goldmansachs.svg" alt="Goldman Sachs logo"/></div><span class="credential-rank">Finance</span></div></div>
             <div><h3>Controllers</h3><div class="credential-org">Goldman Sachs</div><div class="credential-meta">Issued Aug 2026 · ID 6a7b5c3388ca5aeabd51adf6</div></div>
-            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
 
-          <a class="credential-card" href="https://url2659.theforage.com/ss/c/u001.s_sGhHZ4QCXbguVWDSNEorJM2C7M7U802rhCaaeKez099eygpHkPtf4h9VDDmeiYLc3zUrGrxJY0v2AHye6SV7YGqc0qYpCRbwjZH3ChC3t4wbuhbRQbR6rNAW3uTF3JuKxwEqhR5maUReLYZkR5F2epnYpRopgNqTBI3urwSD_iljVCSDQKteYWgNeulQulMyA2f_Dfl7F7HBbZd_Qy-K4UtVS9jCMxxYMPtMoIxQL-O4wvGodI7VD-tAc767AaqkzYs-nBPD_nrK0BYGzN4Q/4te/RDR-7OGOTFeJiguCgbJyLg/h1/h001.CvWma5gcuY8f_SOJpc3zy78qzzEsX1wBkifYN62IqSU" target="_blank" rel="noopener">
+          <div class="credential-card credential-card-pending" data-credential="Key Roles & Business Segments" data-issuer="PNC">
             <div><div class="credential-top"><div class="credential-logo-wrap"><span class="credential-logo text-logo">PNC</span></div><span class="credential-rank">Finance</span></div></div>
             <div><h3>Key Roles & Business Segments</h3><div class="credential-org">PNC</div><div class="credential-meta">Issued Aug 2026 · ID 6a890d45841fdedde7c5d2c3</div></div>
-            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
-          </a>
+            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
+          </div>
         </div>
 
         <div class="credential-footer">
-          <span>Credential cards open the issuer/share page when a direct public URL is available; otherwise they open my LinkedIn Certifications section. Additional programs include IBM Generative AI & Data Fundamentals, Microsoft Generative AI, Salesforce data comparison, LinkedIn AI/security coursework and Blue Ocean entrepreneurship.</span>
+          <span>Only exact public credential URLs are linked. Cards marked “Exact credential link needed” are intentionally non-clickable rather than sending visitors to the wrong page. Additional programs include IBM Generative AI & Data Fundamentals, Microsoft Generative AI, Salesforce data comparison, LinkedIn AI/security coursework and Blue Ocean entrepreneurship.</span>
           <a href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">View all credentials ↗</a>
         </div>
       </div>
@@ -683,6 +730,19 @@
           'A provenance graph connects source → asset → policy → request → privacy → transaction → ledger so the flow can be inspected.',
           'Public beta is explicit about what is real, modeled or simulated—no pretending a prototype is a production marketplace.'
         ], significance:'Most products treat personal data as background exhaust. DataShadow starts from the opposite assumption: the person should understand the terms, the flow and the value.'
+      },
+      athena: {
+        eyebrow:'ATHENA OS · Athlete intelligence', title:'Model the athlete as a changing system.',
+        intro:'ATHENA OS is a local-first athlete-intelligence and research platform I co-created as an equal 50/50 collaboration. It combines event-specific track & field tools, longitudinal athlete-state modeling, explicit uncertainty, reproducible evidence and conservative health communication support.',
+        link:'https://nikithamallojhala-ctrl.github.io/Athena/', cta:'Open ATHENA',
+        bullets:[
+          'Primary performance analysis spans 27,548 athletes, 155,109 real-world race records and 65,895 longitudinal prediction sequences.',
+          'Covers 18+ track & field disciplines with sprint pacing, hurdle rhythm, relay ordering, jump/throw logging and event-aware planning tools.',
+          'The state engine combines individual baselines, current observations, event context, longitudinal history and visible confidence instead of hiding everything behind a single score.',
+          'Pallas provides local assistant functions without requiring athlete data to be sent to a remote chatbot; the platform is explicit about when evidence is insufficient.',
+          'Research mode exposes rolling validation, model hierarchy, ablations, stress tests, failure analysis, prospective protocol locking and claim-to-artifact integrity checks.',
+          'Health + Handoff tools are deliberately separated from performance prediction and framed as education/communication support—not diagnosis or medical clearance.'
+        ], significance:'ATHENA matters because the product, research layer and safety boundaries reinforce one another. It aims to make athlete intelligence more useful without pretending uncertainty or health limitations do not exist.'
       },
       dinksense: {
         eyebrow:'DinkSense · Sports technology', title:'Training software built from time on the court.',
