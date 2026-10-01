@@ -180,6 +180,32 @@
     @media(max-width:900px){.patent-shell{grid-template-columns:1fr}.patent-deck{grid-template-columns:1fr}.patent-facts{max-width:640px}}
     @media(max-width:600px){.patent{padding:72px 0}.patent-topline{align-items:flex-start;flex-direction:column;gap:8px}.patent-facts{grid-template-columns:1fr}.patent-fact{min-height:auto}}
 
+
+    /* RESEARCH & INTELLIGENCE */
+    .research{background:#0d1825;color:#f4f0e8;padding:104px 0 110px;border-bottom:1px solid rgba(255,255,255,.12)}
+    .research .eyebrow{color:#9fb0bf}
+    .research-grid{display:grid;grid-template-columns:190px minmax(0,1fr);gap:34px}
+    .research-main{border-top:1px solid rgba(255,255,255,.55);padding-top:24px}
+    .research-kicker{font:600 9px/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.1em;color:#d08a68;margin-bottom:16px}
+    .research h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(50px,6vw,82px);line-height:.93;letter-spacing:-.045em;margin:0;max-width:960px}
+    .research-intro{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:44px;margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.15)}
+    .research-intro p{margin:0;color:#c1cad1;font-size:14px;line-height:1.8;max-width:720px}
+    .research-stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.15)}
+    .research-stat{background:#111f2f;padding:17px 15px;min-height:92px}
+    .research-stat strong{display:block;font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;line-height:1;color:#fff}
+    .research-stat span{display:block;margin-top:7px;font:500 8px/1.35 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:#9fb0bf}
+    .research-panels{display:grid;grid-template-columns:repeat(3,1fr);margin-top:34px;border-top:1px solid rgba(255,255,255,.15);border-left:1px solid rgba(255,255,255,.15)}
+    .research-panel{padding:26px 24px 28px;border-right:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15);min-height:210px}
+    .research-panel .num{font:500 9px/1 'IBM Plex Mono',monospace;color:#d08a68;letter-spacing:.1em}
+    .research-panel h3{font-family:'Instrument Serif',serif;font-size:31px;font-weight:400;line-height:1.03;margin:13px 0 12px}
+    .research-panel p{color:#aebbc5;font-size:12px;line-height:1.7;margin:0}
+    .research-formula{margin-top:24px;padding:17px 18px;border:1px solid rgba(255,255,255,.15);font:500 10px/1.6 'IBM Plex Mono',monospace;color:#cbd4dc}
+    .research-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+    .research .btn-dark{background:#f4f0e8;color:#111820;border-color:#f4f0e8}
+    .research .btn-quiet{color:#f4f0e8;border-color:rgba(255,255,255,.28)}
+    @media(max-width:900px){.research-grid{grid-template-columns:1fr}.research-intro{grid-template-columns:1fr}.research-panels{grid-template-columns:1fr}}
+    @media(max-width:600px){.research{padding:76px 0 82px}.research-stat-grid{grid-template-columns:1fr}.research-stat{min-height:auto}}
+
     /* PRESS */
     .press{background:#1f1e1b;color:var(--paper);padding-bottom:105px;overflow:hidden}
     .press .section-head{padding-top:105px}
@@ -239,8 +265,8 @@
     .credential-logo[src$="isc2.svg"]{max-height:40px}
     .credential-logo[src$="hubspot.svg"]{max-height:40px}
     .credential-logo[src$="cfi.svg"]{max-height:40px;filter:invert(1)}
-    .credential-logo-wrap-linkedin{height:72px;width:210px;max-width:64%;overflow:visible;align-items:center;justify-content:flex-start}
-    .credential-logo-linkedin{display:block;width:200px;height:auto;max-width:100%;max-height:72px;object-fit:contain;object-position:left center;margin:0}
+    .credential-logo-wrap-linkedin{height:58px;width:72px;max-width:none;overflow:visible;align-items:center;justify-content:flex-start}
+    .credential-logo-linkedin{display:block;width:54px;height:54px;max-width:none;max-height:none;object-fit:contain;object-position:center;margin:0}
     .credential-logo-blueocean{width:92px;max-height:50px;mix-blend-mode:multiply;object-position:center}
 
     .credential-rank{font:500 9px/1 'IBM Plex Mono',monospace;color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase}
@@ -253,7 +279,7 @@
     .credential-footer{margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--ink-soft);font-size:11px}
     .credential-footer a{font-weight:800;color:var(--ink);border-bottom:1px solid var(--line-strong)}
     @media (max-width:980px){.credential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.credential-lede{grid-template-columns:150px 1fr}}
-    @media (max-width:700px){.credentials{padding-bottom:76px}.credential-grid{grid-template-columns:1fr}.credential-lede{grid-template-columns:1fr;margin-top:-18px}.credential-lede p{grid-column:1}.credential-card{min-height:205px}}
+    @media (max-width:700px){.credentials{padding-bottom:76px;overflow:visible}.credential-grid{grid-template-columns:1fr;width:100%;overflow:visible}.credential-lede{grid-template-columns:1fr;margin-top:-18px}.credential-lede p{grid-column:1}.credential-card{min-height:205px;width:100%;opacity:1!important;transform:none!important;transition:background .22s ease!important}.credentials .credential-grid.stagger>*,.credentials .stagger>*{opacity:1!important;transform:none!important}.credential-footer{align-items:flex-start;flex-direction:column}.credential-logo-wrap{max-width:62%}}
 
     /* ABOUT */
     .about{border-top:1px solid var(--line);padding:110px 0 100px}
@@ -329,6 +355,7 @@
       <div class="nav-links">
         <a href="#work">Work</a>
         <a href="#patent">Patent</a>
+        <a href="#research">Research</a>
         <a href="#press">Press</a>
         <a href="#credentials">Credentials</a>
         <a href="#about">About</a>
@@ -365,7 +392,7 @@
     </header>
 
     <div class="story-strip" aria-hidden="true">
-      <div class="marquee"><span><i>Scholark</i> · 10,000+ monthly users</span><span><i>Capital Mastery</i> · finance readiness</span><span><i>OpenLens</i> · smart-glasses development</span><span><i>DataShadow</i> · patent-pending privacy concept</span><span><i>Shenzhen</i> · AI/AR expo invitation</span><span><i>IBM</i> · cybersecurity exposure</span><span><i>Scholark</i> · 10,000+ monthly users</span><span><i>Capital Mastery</i> · finance readiness</span><span><i>OpenLens</i> · smart-glasses development</span><span><i>DataShadow</i> · patent-pending privacy concept</span><span><i>Shenzhen</i> · AI/AR expo invitation</span><span><i>IBM</i> · cybersecurity exposure</span></div>
+      <div class="marquee"><span><i>Scholark</i> · 10,000+ monthly users</span><span><i>Capital Mastery</i> · finance readiness</span><span><i>OpenLens</i> · smart-glasses development</span><span><i>DataShadow</i> · patent-pending privacy concept</span><span><i>Shenzhen</i> · AI/AR expo invitation</span><span><i>IBM</i> · cybersecurity exposure</span><span><i>Cyber Risk</i> · 17-industry risk index</span><span><i>Scholark</i> · 10,000+ monthly users</span><span><i>Capital Mastery</i> · finance readiness</span><span><i>OpenLens</i> · smart-glasses development</span><span><i>DataShadow</i> · patent-pending privacy concept</span><span><i>Shenzhen</i> · AI/AR expo invitation</span><span><i>IBM</i> · cybersecurity exposure</span><span><i>Cyber Risk</i> · 17-industry risk index</span></div>
     </div>
 
     <section id="work" class="projects">
@@ -580,10 +607,51 @@
       </div>
     </section>
 
+
+    <section id="research" class="research">
+      <div class="wrap research-grid">
+        <div class="eyebrow reveal">03 / Research & intelligence</div>
+        <div class="research-main reveal">
+          <div class="research-kicker">Independent annual research publication</div>
+          <h2>Cyber Risk Intelligence Report.</h2>
+          <div class="research-intro">
+            <p>An independent research initiative I authored to turn complex cybersecurity data into quantified, decision-oriented analysis. The 2026 edition combines an original industry-risk model, governance case-study work and forward-looking threat analysis using authoritative source material from IBM, Verizon and U.S. government sources.</p>
+            <div class="research-stat-grid">
+              <div class="research-stat"><strong>17</strong><span>industries scored</span></div>
+              <div class="research-stat"><strong>3</strong><span>research parts</span></div>
+              <div class="research-stat"><strong>40/30/30</strong><span>weighted risk model</span></div>
+            </div>
+          </div>
+          <div class="research-panels">
+            <article class="research-panel">
+              <div class="num">01 / INDEX</div>
+              <h3>Industry Risk Index</h3>
+              <p>A proprietary quantitative score across 17 industries using average breach cost, attack frequency and recovery burden.</p>
+            </article>
+            <article class="research-panel">
+              <div class="num">02 / GOVERNANCE</div>
+              <h3>Case-study deep dives</h3>
+              <p>Historical breach and governance failures examined through accountability, controls, operational complexity and executive-risk lenses.</p>
+            </article>
+            <article class="research-panel">
+              <div class="num">03 / EMERGING THREATS</div>
+              <h3>What changes next</h3>
+              <p>Analysis of AI-weaponized attacks, AI-enhanced social engineering, shadow-AI governance and supply-chain compromise.</p>
+            </article>
+          </div>
+          <div class="research-formula">Risk Score = (0.40 × Breach Cost) + (0.30 × Attack Frequency) + (0.30 × Recovery Burden)</div>
+          <div class="research-actions">
+            <a class="btn btn-dark" href="https://raw.githubusercontent.com/SriBYJU/Cyber-Risk-Intelligence-Initiative/main/Cyber_Risk_Intelligence_Report_2026.pdf" target="_blank" rel="noopener">Open report ↗</a>
+            <a class="btn btn-quiet" href="https://github.com/SriBYJU/Cyber-Risk-Intelligence-Initiative" target="_blank" rel="noopener">View research repository ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="press" class="press">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">03 / Press & writing</div>
+          <div class="eyebrow">04 / Press & writing</div>
           <div><h2>The work started traveling.</h2><p>20+ national and international articles have covered me and my work. I’ve also authored or co-authored 4+ published pieces for outside outlets on education, accessibility and the systems I’m building. Every logo below opens the article or coverage page—not a homepage.</p></div>
         </div>
       </div>
@@ -596,12 +664,12 @@
     <section class="beyond" id="experience">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">04 / Beyond the builds</div>
+          <div class="eyebrow">05 / Beyond the builds</div>
           <div><h2>What else shaped the way I work.</h2><p>The products matter, but so do the environments that changed how I think about risk, business, writing and learning.</p></div>
         </div>
         <div class="beyond-grid stagger">
           <article class="beyond-card"><div><div class="eyebrow">Cybersecurity exposure</div><h3>IBM</h3><p>Observed enterprise cybersecurity practices across penetration testing, vulnerability management, security assessments, risk management and enterprise security.</p></div><div class="mini">Observation & exposure — not represented as hands-on ownership</div></article>
-          <article class="beyond-card"><div><div class="eyebrow">Finance & M&A</div><h3>Sterling Point Advisors</h3><p>M&A mentorship with a managing director helped ground Capital Mastery in what finance readiness looks like beyond textbook knowledge.</p></div><div class="mini">Mentorship · finance readiness · pre-onboarding context</div></article>
+          <article class="beyond-card"><div><div class="eyebrow">Finance & M&A</div><h3>Independent M&A mentorship</h3><p>Under mentorship from a managing director at Sterling Point Advisors, I completed <strong>10+ self-directed transaction-style deliverables</strong> across DCF, trading comps, precedent transactions and deal analysis to practice real finance workflows. This was independent learning—not employment, client work, or work produced for Sterling Point Advisors.</p></div><div class="mini">10+ independent deliverables · mentorship only · not firm work</div></article>
           <article class="beyond-card"><div><div class="eyebrow">Writing & media</div><h3>Ideas in public</h3><p>20+ national and international articles have covered me and my work, alongside 4+ pieces I’ve authored or co-authored for outside publications on education, accessibility and technology.</p></div><div class="mini">20+ coverage articles · 4+ bylined / co-bylined pieces</div></article>
           <article class="beyond-card"><div><div class="eyebrow">Continuous learning</div><h3>31 credentials across finance, AI & security.</h3><p>I use structured programs to learn the language, workflows and judgment behind the systems I build—from investment banking and risk to generative AI, automation and cybersecurity.</p></div><div class="mini"><a href="#credentials">JPMorganChase · Goldman Sachs · IBM · Anthropic · OpenAI →</a></div></article>
         </div>
@@ -612,7 +680,7 @@
     <section id="credentials" class="credentials">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="eyebrow">05 / Credentials</div>
+          <div class="eyebrow">06 / Credentials</div>
           <div><h2>Learning with receipts.</h2><p>31 public credentials across finance, artificial intelligence, cybersecurity, automation, data, marketing and entrepreneurship.</p></div>
         </div>
         <div class="credential-lede reveal">
@@ -985,7 +1053,7 @@
           <a class="credential-card" href="https://www.linkedin.com/learning/certificates/33e3843af7c8c890cdbdacbca39c0b62386e9b4b9a22077b6db4aad62ac80826/" target="_blank" rel="noopener">
             <div>
               <div class="credential-top">
-                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-square.png" alt="LinkedIn Learning logo" loading="lazy"/></div>
                 <span class="credential-rank">AI</span>
               </div>
             </div>
@@ -1000,7 +1068,7 @@
           <a class="credential-card" href="https://www.linkedin.com/learning/certificates/9ff036df1384a30050f937da9e080138ffeeab8a9f117b2dc241b626fe4abba9/" target="_blank" rel="noopener">
             <div>
               <div class="credential-top">
-                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-square.png" alt="LinkedIn Learning logo" loading="lazy"/></div>
                 <span class="credential-rank">Security</span>
               </div>
             </div>
@@ -1015,7 +1083,7 @@
           <a class="credential-card" href="https://www.linkedin.com/learning/certificates/b46d5c4e38ba04c21c2b811885a67aba0968e3ea8871632397d7ad8e22037296/" target="_blank" rel="noopener">
             <div>
               <div class="credential-top">
-                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-square.png" alt="LinkedIn Learning logo" loading="lazy"/></div>
                 <span class="credential-rank">Finance</span>
               </div>
             </div>
@@ -1030,7 +1098,7 @@
           <a class="credential-card" href="https://www.linkedin.com/learning/certificates/8a80b9122ae6fa76d0115ba2f66fb3207fbea81a4ce08529fee1a7449c2a4529/" target="_blank" rel="noopener">
             <div>
               <div class="credential-top">
-                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-square.png" alt="LinkedIn Learning logo" loading="lazy"/></div>
                 <span class="credential-rank">AI</span>
               </div>
             </div>
@@ -1045,7 +1113,7 @@
           <a class="credential-card" href="https://www.linkedin.com/learning/certificates/2a6b760f96bfa21abf72c60b7cfbea9945383e0173843dadba0d99e198500514/" target="_blank" rel="noopener">
             <div>
               <div class="credential-top">
-                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-logo.webp" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <div class="credential-logo-wrap credential-logo-wrap-linkedin"><img class="credential-logo credential-logo-linkedin" src="assets/credentials/linkedin-learning-square.png" alt="LinkedIn Learning logo" loading="lazy"/></div>
                 <span class="credential-rank">AI</span>
               </div>
             </div>
@@ -1097,7 +1165,7 @@
 
     <section id="about" class="about">
       <div class="wrap about-grid reveal">
-        <div class="eyebrow">06 / About</div>
+        <div class="eyebrow">07 / About</div>
         <p class="about-copy">I don’t really have one lane. I tend to find a problem, open <em>way too many tabs</em>, and keep going until there’s something real enough for another person to use.</p>
         <div class="about-side"><p>That’s how a college-planning frustration became Scholark, finance curiosity became Capital Mastery, smart-glasses research became OpenLens, and questions about data ownership became DataShadow.</p><p>I’m still in high school, which mostly means I’m learning while building in public—and getting comfortable with the fact that those two things happen at the same time.</p><div class="learning-list" aria-label="Organizations represented in completed learning programs"><span>JPMorgan Chase</span><span>Goldman Sachs</span><span>Anthropic</span><span>IBM</span><span>OpenAI</span><span>Microsoft</span><span>Bank of America</span><span>Citi</span><span>Mastercard</span><span>CFI</span></div></div>
       </div>
@@ -1105,7 +1173,7 @@
 
     <section id="contact" class="contact">
       <div class="wrap contact-grid">
-        <div class="eyebrow" style="color:#312219">07 / Contact</div>
+        <div class="eyebrow" style="color:#312219">08 / Contact</div>
         <div>
           <h2>Have something worth building?</h2>
           <div class="contact-links">
