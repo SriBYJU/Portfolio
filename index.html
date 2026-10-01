@@ -194,17 +194,26 @@
     .credential-card-pending:hover{transform:none;background:rgba(255,255,255,.22)}
     .credential-card-pending .credential-linkline{color:var(--ink-soft)}
     .credential-top{display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .credential-logo-wrap{height:48px;width:168px;max-width:48%;display:flex;align-items:center;justify-content:flex-start;padding:7px 10px;border:1px solid rgba(28,24,18,.08);border-radius:7px;background:#fff;overflow:hidden}
-    .credential-logo{display:block;max-width:100%;max-height:34px;width:auto;height:auto;object-fit:contain;object-position:left center}
+    .credential-logo-wrap{height:58px;width:190px;max-width:58%;display:flex;align-items:center;justify-content:flex-start;padding:0;border:0;border-radius:0;background:transparent;overflow:visible}
+    .credential-logo{display:block;max-width:100%;max-height:46px;width:auto;height:auto;object-fit:contain;object-position:left center}
     .credential-logo.text-logo{font:700 15px/1.1 Manrope,sans-serif;letter-spacing:-.03em;color:var(--ink);white-space:nowrap}
-    .credential-logo[src*="jpmorgan-user"]{max-height:40px;border-radius:3px}
-    .credential-logo[src*="goldman-user"]{max-height:40px}
-    .credential-logo[src*="anthropic-user"],.credential-logo[src*="openai-user"]{max-height:31px}
-    .credential-logo[src$="pnc.svg"],.credential-logo[src$="microsoft.svg"],.credential-logo[src$="citi.svg"]{max-height:30px}
-    /* CFI's mark is white artwork, so give it a dark plate instead of white-on-white. */
-    .credential-logo[src$="cfi.svg"]{box-sizing:border-box;width:100%;max-width:100%;max-height:40px;padding:7px 10px;border-radius:4px;background:#123447;object-position:center}
-    /* Add a touch of breathing room for monochrome marks so they remain legible on bright displays. */
-    .credential-logo[src$="isc2.svg"],.credential-logo[src$="hubspot.svg"],.credential-logo[src$="bank-of-america.svg"],.credential-logo[src*="anthropic-user"],.credential-logo[src*="openai-user"]{padding:2px}
+
+    .credential-logo[src*="jpmorgan-user"]{max-height:52px}
+    .credential-logo[src*="goldman-user"]{max-height:54px}
+    .credential-logo[src*="anthropic-user"]{max-height:40px}
+    .credential-logo[src*="openai-user"]{max-height:42px}
+    .credential-logo[src$="ibm.svg"]{max-height:38px}
+    .credential-logo[src$="microsoft.svg"]{max-height:36px}
+    .credential-logo[src$="pnc.svg"]{max-height:37px}
+    .credential-logo[src$="citi.svg"]{max-height:38px}
+    .credential-logo[src$="mastercard.svg"]{max-height:43px}
+    .credential-logo[src$="bank-of-america.svg"]{max-height:42px}
+    .credential-logo[src$="isc2.svg"]{max-height:40px}
+    .credential-logo[src$="hubspot.svg"]{max-height:40px}
+    .credential-logo[src$="cfi.svg"]{max-height:40px;filter:invert(1)}
+    .credential-logo[src*="simpleicons.org/linkedin"]{max-height:39px}
+    .credential-logo-blueocean{width:92px;max-height:50px;mix-blend-mode:multiply;object-position:center}
+
     .credential-rank{font:500 9px/1 'IBM Plex Mono',monospace;color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase}
     .credential-card h3{font-family:'Instrument Serif',serif;font-size:29px;font-weight:400;line-height:1.02;letter-spacing:-.025em;margin:0 0 8px}
     .credential-org{font-size:11px;font-weight:700;color:var(--ink);margin-bottom:7px}
@@ -320,7 +329,7 @@
           <div class="proof"><strong>10K+</strong><span>monthly users referenced for Scholark</span></div>
           <div class="proof"><strong>20+</strong><span>national & international publications</span></div>
           <div class="proof"><strong>1</strong><span>U.S. provisional patent filing</span></div>
-          <div class="proof"><strong>30+</strong><span>professional credentials & learning programs</span></div>
+          <div class="proof"><strong>31</strong><span>public credentials & learning programs</span></div>
         </div>
       </div>
     </header>
@@ -535,126 +544,484 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div class="eyebrow">04 / Credentials</div>
-          <div><h2>Learning with receipts.</h2><p>30+ credentials and professional learning programs across finance, artificial intelligence, cybersecurity, automation and strategy.</p></div>
+          <div><h2>Learning with receipts.</h2><p>31 public credentials across finance, artificial intelligence, cybersecurity, automation, data, marketing and entrepreneurship.</p></div>
         </div>
         <div class="credential-lede reveal">
           <div></div>
-          <p>The point was never to collect badges. I use these programs to get closer to the vocabulary, workflows and judgment behind the things I’m trying to build. Featured first are the organizations and programs that have been most central to that learning.</p>
+          <p>The credentials are linked directly to their public verification pages or completion certificates. No generic profile fallbacks.</p>
         </div>
 
         <div class="credential-grid stagger">
-          <div class="credential-card credential-card-pending" data-credential="Investment Banking" data-issuer="JPMorganChase">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/jpmorgan-user.webp" alt="JPMorganChase logo" loading="lazy"/></div><span class="credential-rank">Finance</span></div></div>
-            <div><h3>Investment Banking</h3><div class="credential-org">JPMorganChase</div><div class="credential-meta">Issued Jun 2026 · ID 7a9MN9JW5fk6u2ypy</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
 
-          <div class="credential-card credential-card-pending" data-credential="Risk" data-issuer="Goldman Sachs">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/goldman-user.webp" alt="Goldman Sachs logo" loading="lazy"/></div><span class="credential-rank">Finance</span></div></div>
-            <div><h3>Risk</h3><div class="credential-org">Goldman Sachs</div><div class="credential-meta">Issued Jun 2026 · ID mYT2b4g4BsX6H2JXx</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
+          <a class="credential-card" href="https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/YD2kY95RQxQtXxFTS_Sj7temL583QAYpHXD_6a1dbd03f4ea13cc8c5294c3_1780676599218_completion_certificate.pdf" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/jpmorgan-user.webp" alt="JPMorganChase logo" loading="lazy"/></div>
+                <span class="credential-rank">Finance</span>
+              </div>
+            </div>
+            <div>
+              <h3>JPMorganChase - Investment Banking</h3>
+              <div class="credential-org">JPMorganChase</div>
+              <div class="credential-meta">Issued Jun 2026 · ID 7a9MN9JW5fk6u2ypy</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
 
-          <div class="credential-card credential-card-pending" data-credential="Cybersecurity Fundamentals" data-issuer="IBM">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/ibm.svg" alt="IBM logo" loading="lazy"/></div><span class="credential-rank">Cyber / AI</span></div></div>
-            <div><h3>Cybersecurity Fundamentals</h3><div class="credential-org">IBM</div><div class="credential-meta">Issued Jun 2026 · SkillsBuild</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
+          <a class="credential-card" href="https://www.theforage.com/completion-certificates/MBA4MnZTNFEoJZGnk/ETGMhLB5eCrYjcH8o_MBA4MnZTNFEoJZGnk_6a1dbd03f4ea13cc8c5294c3_1780334692707_completion_certificate.pdf" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/goldman-user.webp" alt="Goldman Sachs logo" loading="lazy"/></div>
+                <span class="credential-rank">Finance</span>
+              </div>
+            </div>
+            <div>
+              <h3>Goldman Sachs - Risk</h3>
+              <div class="credential-org">Goldman Sachs</div>
+              <div class="credential-meta">Issued Jun 2026 · ID mYT2b4g4BsX6H2JXx</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
 
-          <div class="credential-card credential-card-pending" data-credential="Model Context Protocol: Advanced Topics" data-issuer="Anthropic · Claude Academy">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/anthropic-user.webp" alt="Anthropic logo" loading="lazy"/></div><span class="credential-rank">AI</span></div></div>
-            <div><h3>Model Context Protocol: Advanced Topics</h3><div class="credential-org">Anthropic · Claude Academy</div><div class="credential-meta">Issued Aug 2026 · ID bcff8fd230f6a5f2189b04b11f0765d7</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
+          <a class="credential-card" href="https://www.credly.com/badges/fa8738ba-e362-4282-9381-9da68e0dd255/linked_in_profile" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/ibm.svg" alt="IBM logo" loading="lazy"/></div>
+                <span class="credential-rank">Security</span>
+              </div>
+            </div>
+            <div>
+              <h3>Cybersecurity Fundamentals</h3>
+              <div class="credential-org">IBM</div>
+              <div class="credential-meta">Issued Jun 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://academy.claude.com/verify/bcff8fd230f6a5f2189b04b11f0765d7" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/anthropic-user.webp" alt="Anthropic · Claude Academy logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>Claude Academy: Model Context Protocol: Advanced Topics</h3>
+              <div class="credential-org">Anthropic · Claude Academy</div>
+              <div class="credential-meta">Issued Aug 2026 · ID bcff8fd230f6a5f2189b04b11f0765d7</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
 
           <a class="credential-card" href="https://academy.openai.com/public/certificate/r86flcvzho" target="_blank" rel="noopener">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/openai-user.webp" alt="OpenAI Academy logo" loading="lazy"/></div><span class="credential-rank">AI</span></div></div>
-            <div><h3>AI Foundations</h3><div class="credential-org">OpenAI Academy</div><div class="credential-meta">Issued Aug 2026 · ID r86flcvzho</div></div>
-            <div class="credential-linkline"><span>Open certificate</span><span>↗</span></div>
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/openai-user.webp" alt="OpenAI Academy logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>AI Foundations</h3>
+              <div class="credential-org">OpenAI Academy</div>
+              <div class="credential-meta">Issued Aug 2026 · ID r86flcvzho</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.theforage.com/completion-certificates/MBA4MnZTNFEoJZGnk/wNge9cjzNTXD2acrv_MBA4MnZTNFEoJZGnk_6a1dbd03f4ea13cc8c5294c3_1780336180168_completion_certificate.pdf" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/goldman-user.webp" alt="Goldman Sachs logo" loading="lazy"/></div>
+                <span class="credential-rank">Operations</span>
+              </div>
+            </div>
+            <div>
+              <h3>Goldman Sachs - Operations</h3>
+              <div class="credential-org">Goldman Sachs</div>
+              <div class="credential-meta">Issued Jun 2026 · ID 3FcZvQZQt3yi8qFqb</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.theforage.com/completion-certificates/MBA4MnZTNFEoJZGnk/dC4ChhAkhpgB7QvGd_MBA4MnZTNFEoJZGnk_6a1dbd03f4ea13cc8c5294c3_1787343571849_completion_certificate.pdf" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/goldman-user.webp" alt="Goldman Sachs logo" loading="lazy"/></div>
+                <span class="credential-rank">Audit</span>
+              </div>
+            </div>
+            <div>
+              <h3>Goldman Sachs - Internal Audit</h3>
+              <div class="credential-org">Goldman Sachs</div>
+              <div class="credential-meta">Issued Aug 2026 · ID 6a88b014be4748808e58cd87</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.theforage.com/completion-certificates/MBA4MnZTNFEoJZGnk/vjFao7z4tXKe2EwvK_MBA4MnZTNFEoJZGnk_6a1dbd03f4ea13cc8c5294c3_1786469829095_completion_certificate.pdf" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/goldman-user.webp" alt="Goldman Sachs logo" loading="lazy"/></div>
+                <span class="credential-rank">Finance</span>
+              </div>
+            </div>
+            <div>
+              <h3>Goldman Sachs - Controllers</h3>
+              <div class="credential-org">Goldman Sachs</div>
+              <div class="credential-meta">Issued Aug 2026 · ID 6a7b5c3388ca5aeabd51adf6</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://students.yourlearning.ibm.com/certificate/share/555d0a76f3ewogICJvYmplY3RJZCIgOiAiQUxNLUNPVVJTRV80MDYxNTI2IiwKICAibGVhcm5lckNOVU0iIDogIjQwNDI0NjRSRUciLAogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIKfQ92f8d09e9d-10" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/ibm.svg" alt="IBM logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>Foundations in Generative AI</h3>
+              <div class="credential-org">IBM</div>
+              <div class="credential-meta">Issued Aug 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.credly.com/badges/53b82b7f-2d76-48a1-93d9-102c086560cb/linked_in_profile" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/ibm.svg" alt="IBM logo" loading="lazy"/></div>
+                <span class="credential-rank">Data</span>
+              </div>
+            </div>
+            <div>
+              <h3>Data Fundamentals</h3>
+              <div class="credential-org">IBM</div>
+              <div class="credential-meta">Issued Jun 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.credly.com/badges/487dbcca-472d-4fb4-ab1e-f8d196943440/linked_in_profile" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/ibm.svg" alt="IBM logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>AI Literacy</h3>
+              <div class="credential-org">IBM</div>
+              <div class="credential-meta">Issued Jun 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://academy.claude.com/verify/24ca825013ccc5083c1ea45577ed28b0" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/anthropic-user.webp" alt="Anthropic · Claude Academy logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>Claude Academy: Building with the Claude API</h3>
+              <div class="credential-org">Anthropic · Claude Academy</div>
+              <div class="credential-meta">Issued Aug 2026 · ID 24ca825013ccc5083c1ea45577ed28b0</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://academy.claude.com/verify/4695c0a172ecfdca9c19375453ae34fe" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/anthropic-user.webp" alt="Anthropic · Claude Academy logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>Claude Academy: AI Fluency: Framework &amp; Foundations</h3>
+              <div class="credential-org">Anthropic · Claude Academy</div>
+              <div class="credential-meta">Issued Aug 2026 · ID 4695c0a172ecfdca9c19375453ae34fe</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://academy.claude.com/verify/11f2c4da515fb62a7562d50de0195c36" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/anthropic-user.webp" alt="Anthropic · Claude Academy logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>Claude Academy: Claude Code in Action</h3>
+              <div class="credential-org">Anthropic · Claude Academy</div>
+              <div class="credential-meta">Issued Aug 2026 · ID 11f2c4da515fb62a7562d50de0195c36</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
           </a>
 
           <a class="credential-card" href="https://learn.microsoft.com/api/credentials/share/en-us/ShriyanAvadhanula-9715/A92F6510039FF9EC?sharingId=C222D5469AB15EBE" target="_blank" rel="noopener">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/microsoft.svg" alt="Microsoft logo" loading="lazy"/></div><span class="credential-rank">Automation</span></div></div>
-            <div><h3>Applied Skills: Power Automate</h3><div class="credential-org">Microsoft</div><div class="credential-meta">Issued Jun 2026 · ID A92F6510039FF9EC</div></div>
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/microsoft.svg" alt="Microsoft logo" loading="lazy"/></div>
+                <span class="credential-rank">Automation</span>
+              </div>
+            </div>
+            <div>
+              <h3>Microsoft Applied Skills: Create and manage automated processes by using Power Automate</h3>
+              <div class="credential-org">Microsoft</div>
+              <div class="credential-meta">Issued Jun 2026 · ID A92F6510039FF9EC</div>
+            </div>
             <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
           </a>
 
-          <div class="credential-card credential-card-pending" data-credential="The Private Bank" data-issuer="Bank of America">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/bank-of-america.svg" alt="Bank of America logo" loading="lazy"/></div><span class="credential-rank">Finance</span></div></div>
-            <div><h3>The Private Bank</h3><div class="credential-org">Bank of America</div><div class="credential-meta">Issued Jun 2026 · ID LXnFAoTJDCJxifA6o</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
+          <a class="credential-card" href="https://learn.microsoft.com/api/achievements/share/en-us/ShriyanAvadhanula-9715/BUXP8U8D?sharingId=C222D5469AB15EBE" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/microsoft.svg" alt="Microsoft logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>Introduction to generative AI and agents</h3>
+              <div class="credential-org">Microsoft</div>
+              <div class="credential-meta">Issued Aug 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
 
-          <div class="credential-card credential-card-pending" data-credential="Investment Banking" data-issuer="Citi">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/citi.svg" alt="Citi logo" loading="lazy"/></div><span class="credential-rank">Finance</span></div></div>
-            <div><h3>Investment Banking</h3><div class="credential-org">Citi</div><div class="credential-meta">Issued Jun 2026 · ID WcYpSefxLXroNKLur</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
+          <a class="credential-card" href="https://learn.microsoft.com/api/achievements/share/en-us/ShriyanAvadhanula-9715/XPSWK34Y?sharingId=C222D5469AB15EBE" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/microsoft.svg" alt="Microsoft logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>Explore Generative AI</h3>
+              <div class="credential-org">Microsoft</div>
+              <div class="credential-meta">Issued Aug 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
 
-          <div class="credential-card credential-card-pending" data-credential="Cybersecurity" data-issuer="Mastercard">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/mastercard.svg" alt="Mastercard logo" loading="lazy"/></div><span class="credential-rank">Cyber</span></div></div>
-            <div><h3>Cybersecurity</h3><div class="credential-org">Mastercard</div><div class="credential-meta">Issued Jun 2026 · ID eQ9WwBEYbWMoG8jad</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
+          <a class="credential-card" href="https://www.theforage.com/completion-certificates/fMCqmt8qR4G85Puue/Lu5h6FDrPES9mKn3h_fMCqmt8qR4G85Puue_6a1dbd03f4ea13cc8c5294c3_1780670182014_completion_certificate.pdf" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/bank-of-america.svg" alt="Bank of America logo" loading="lazy"/></div>
+                <span class="credential-rank">Finance</span>
+              </div>
+            </div>
+            <div>
+              <h3>Bank of America - The Private Bank</h3>
+              <div class="credential-org">Bank of America</div>
+              <div class="credential-meta">Issued Jun 2026 · ID LXnFAoTJDCJxifA6o</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
 
-          <div class="credential-card credential-card-pending" data-credential="Careers in Finance" data-issuer="Corporate Finance Institute">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/cfi.svg" alt="Corporate Finance Institute logo" loading="lazy"/></div><span class="credential-rank">Finance</span></div></div>
-            <div><h3>Careers in Finance</h3><div class="credential-org">Corporate Finance Institute</div><div class="credential-meta">Issued Jan 2026 · ID 172664483</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
+          <a class="credential-card" href="https://www.theforage.com/completion-certificates/8eNRcRqBZM9HLvwGw/amBSJDTDDFcYiKq9Z_8eNRcRqBZM9HLvwGw_6a1dbd03f4ea13cc8c5294c3_1780510497934_completion_certificate.pdf" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/citi.svg" alt="Citi logo" loading="lazy"/></div>
+                <span class="credential-rank">Finance</span>
+              </div>
+            </div>
+            <div>
+              <h3>Citi - Investment Banking JS</h3>
+              <div class="credential-org">Citi</div>
+              <div class="credential-meta">Issued Jun 2026 · ID WcYpSefxLXroNKLur</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
 
-          <div class="credential-card credential-card-pending" data-credential="ISC2 Candidate" data-issuer="ISC2">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/isc2.svg" alt="ISC2 logo" loading="lazy"/></div><span class="credential-rank">Security</span></div></div>
-            <div><h3>ISC2 Candidate</h3><div class="credential-org">ISC2</div><div class="credential-meta">Issued May 2026 · Expires May 2028</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
+          <a class="credential-card" href="https://www.theforage.com/completion-certificates/mfxGwGDp6WkQmtmTf/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_6a1dbd03f4ea13cc8c5294c3_1780509533491_completion_certificate.pdf" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/mastercard.svg" alt="Mastercard logo" loading="lazy"/></div>
+                <span class="credential-rank">Security</span>
+              </div>
+            </div>
+            <div>
+              <h3>Mastercard - Cybersecurity</h3>
+              <div class="credential-org">Mastercard</div>
+              <div class="credential-meta">Issued Jun 2026 · ID eQ9WwBEYbWMoG8jad</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.theforage.com/completion-certificates/3W4C6QjJzfhEmi4Ay/uhmcdWhe4D2aaYpWN_3W4C6QjJzfhEmi4Ay_6a1dbd03f4ea13cc8c5294c3_1787367192046_completion_certificate.pdf" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/pnc.svg" alt="PNC logo" loading="lazy"/></div>
+                <span class="credential-rank">Finance</span>
+              </div>
+            </div>
+            <div>
+              <h3>PNC - PNC: Key Roles and Business Segments</h3>
+              <div class="credential-org">PNC</div>
+              <div class="credential-meta">Issued Aug 2026 · ID 6a890d45841fdedde7c5d2c3</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.theforage.com/completion-certificates/3W4C6QjJzfhEmi4Ay/KfhEd8StnWdjsTGsw_3W4C6QjJzfhEmi4Ay_6a1dbd03f4ea13cc8c5294c3_1780775994747_completion_certificate.pdf" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/pnc.svg" alt="PNC logo" loading="lazy"/></div>
+                <span class="credential-rank">Finance</span>
+              </div>
+            </div>
+            <div>
+              <h3>PNC - Overview of Financial Services and Banking</h3>
+              <div class="credential-org">PNC</div>
+              <div class="credential-meta">Issued Jun 2026 · ID 9cF2gsjW24RuGbDCm</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="http://credentials.corporatefinanceinstitute.com/0c73ab5d-895f-49ec-8610-87e32be9063e" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/cfi.svg" alt="Corporate Finance Institute logo" loading="lazy"/></div>
+                <span class="credential-rank">Finance</span>
+              </div>
+            </div>
+            <div>
+              <h3>Careers in Finance</h3>
+              <div class="credential-org">Corporate Finance Institute</div>
+              <div class="credential-meta">Issued Jan 2026 · ID 172664483</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.credly.com/badges/9d79572a-20fb-4157-815b-6560f38df253/linked_in_profile" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/isc2.svg" alt="ISC2 logo" loading="lazy"/></div>
+                <span class="credential-rank">Security</span>
+              </div>
+            </div>
+            <div>
+              <h3>ISC2 Candidate</h3>
+              <div class="credential-org">ISC2</div>
+              <div class="credential-meta">Issued May 2026 · Expires May 2028</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/learning/certificates/33e3843af7c8c890cdbdacbca39c0b62386e9b4b9a22077b6db4aad62ac80826/" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>Introduction to Model Context Protocol by Anthropic</h3>
+              <div class="credential-org">LinkedIn Learning</div>
+              <div class="credential-meta">Issued Aug 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/learning/certificates/9ff036df1384a30050f937da9e080138ffeeab8a9f117b2dc241b626fe4abba9/" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <span class="credential-rank">Security</span>
+              </div>
+            </div>
+            <div>
+              <h3>Learning Threat Modeling for Security Professionals</h3>
+              <div class="credential-org">LinkedIn Learning</div>
+              <div class="credential-meta">Issued Aug 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/learning/certificates/b46d5c4e38ba04c21c2b811885a67aba0968e3ea8871632397d7ad8e22037296/" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <span class="credential-rank">Finance</span>
+              </div>
+            </div>
+            <div>
+              <h3>Finance Foundations: Risk Management</h3>
+              <div class="credential-org">LinkedIn Learning</div>
+              <div class="credential-meta">Issued Aug 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/learning/certificates/8a80b9122ae6fa76d0115ba2f66fb3207fbea81a4ce08529fee1a7449c2a4529/" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>What Is Generative AI?</h3>
+              <div class="credential-org">LinkedIn Learning</div>
+              <div class="credential-meta">Issued Aug 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
+
+          <a class="credential-card" href="https://www.linkedin.com/learning/certificates/2a6b760f96bfa21abf72c60b7cfbea9945383e0173843dadba0d99e198500514/" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="LinkedIn Learning logo" loading="lazy"/></div>
+                <span class="credential-rank">AI</span>
+              </div>
+            </div>
+            <div>
+              <h3>Turn AI Skeptics into Adoption Champions with Angie Jones</h3>
+              <div class="credential-org">LinkedIn Learning</div>
+              <div class="credential-meta">Issued Aug 2026</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
 
           <a class="credential-card" href="https://app-na2.hubspot.com/academy/achievements/2tqzrz06/en/1/shriyan-avadhanula/digital-marketing-certified" target="_blank" rel="noopener">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/hubspot.svg" alt="HubSpot Academy logo" loading="lazy"/></div><span class="credential-rank">Marketing</span></div></div>
-            <div><h3>Digital Marketing Certified</h3><div class="credential-org">HubSpot Academy</div><div class="credential-meta">Issued Jun 2026 · ID 2tqzrz06</div></div>
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/hubspot.svg" alt="HubSpot Academy logo" loading="lazy"/></div>
+                <span class="credential-rank">Marketing</span>
+              </div>
+            </div>
+            <div>
+              <h3>Digital Marketing Certified</h3>
+              <div class="credential-org">HubSpot Academy</div>
+              <div class="credential-meta">Issued Jun 2026 · ID 2tqzrz06</div>
+            </div>
             <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
           </a>
 
-          <div class="credential-card credential-card-pending" data-credential="Building with the Claude API" data-issuer="Anthropic · Claude Academy">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/anthropic-user.webp" alt="Anthropic logo" loading="lazy"/></div><span class="credential-rank">AI</span></div></div>
-            <div><h3>Building with the Claude API</h3><div class="credential-org">Anthropic · Claude Academy</div><div class="credential-meta">Issued Aug 2026 · ID 24ca825013ccc5083c1ea45577ed28b0</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
-
-          <div class="credential-card credential-card-pending" data-credential="AI Fluency: Framework & Foundations" data-issuer="Anthropic · Claude Academy">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/anthropic-user.webp" alt="Anthropic logo" loading="lazy"/></div><span class="credential-rank">AI</span></div></div>
-            <div><h3>AI Fluency: Framework & Foundations</h3><div class="credential-org">Anthropic · Claude Academy</div><div class="credential-meta">Issued Aug 2026 · ID 4695c0a172ecfdca9c19375453ae34fe</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
-
-          <div class="credential-card credential-card-pending" data-credential="Internal Audit" data-issuer="Goldman Sachs">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/goldman-user.webp" alt="Goldman Sachs logo" loading="lazy"/></div><span class="credential-rank">Audit</span></div></div>
-            <div><h3>Internal Audit</h3><div class="credential-org">Goldman Sachs</div><div class="credential-meta">Issued Aug 2026 · ID 6a88b014be4748808e58cd87</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
-
-          <div class="credential-card credential-card-pending" data-credential="Operations" data-issuer="Goldman Sachs">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/goldman-user.webp" alt="Goldman Sachs logo" loading="lazy"/></div><span class="credential-rank">Operations</span></div></div>
-            <div><h3>Operations</h3><div class="credential-org">Goldman Sachs</div><div class="credential-meta">Issued Jun 2026 · ID 3FcZvQZQt3yi8qFqb</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
-
-          <div class="credential-card credential-card-pending" data-credential="Controllers" data-issuer="Goldman Sachs">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/goldman-user.webp" alt="Goldman Sachs logo" loading="lazy"/></div><span class="credential-rank">Finance</span></div></div>
-            <div><h3>Controllers</h3><div class="credential-org">Goldman Sachs</div><div class="credential-meta">Issued Aug 2026 · ID 6a7b5c3388ca5aeabd51adf6</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
-
-          <div class="credential-card credential-card-pending" data-credential="Key Roles & Business Segments" data-issuer="PNC">
-            <div><div class="credential-top"><div class="credential-logo-wrap"><img class="credential-logo" src="assets/credentials/pnc.svg" alt="PNC logo" loading="lazy"/></div><span class="credential-rank">Finance</span></div></div>
-            <div><h3>Key Roles & Business Segments</h3><div class="credential-org">PNC</div><div class="credential-meta">Issued Aug 2026 · ID 6a890d45841fdedde7c5d2c3</div></div>
-            <div class="credential-linkline"><span>Exact credential link needed</span><span>—</span></div>
-          </div>
+          <a class="credential-card" href="https://credsverse.com/credentials/ed9c9b89-590f-44e9-8a77-6eaab8219f41?preview=1" target="_blank" rel="noopener">
+            <div>
+              <div class="credential-top">
+                <div class="credential-logo-wrap"><img class="credential-logo credential-logo-blueocean" src="https://cdn.brandfetch.io/idubkvXGAk/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&amp;t=1767118852277" alt="Blue Ocean Strategy logo" loading="lazy"/></div>
+                <span class="credential-rank">Entrepreneurship</span>
+              </div>
+            </div>
+            <div>
+              <h3>Blue Ocean Student Entrepreneurs Mini-Course</h3>
+              <div class="credential-org">Blue Ocean Strategy</div>
+              <div class="credential-meta">Issued Sep 2026 · ID ed9c9b89-590f-44e9-8a77-6eaab8219f41</div>
+            </div>
+            <div class="credential-linkline"><span>View credential</span><span>↗</span></div>
+          </a>
         </div>
 
         <div class="credential-footer">
-          <span>Only exact public credential URLs are linked. Cards marked “Exact credential link needed” are intentionally non-clickable rather than sending visitors to the wrong page. Additional programs include IBM Generative AI & Data Fundamentals, Microsoft Generative AI, Salesforce data comparison, LinkedIn AI/security coursework and Blue Ocean entrepreneurship.</span>
-          <a href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener" title="View this credential in Shriyan's public LinkedIn certifications">View all credentials ↗</a>
+          <span>31 credentials · every card opens its exact public certificate or verification page.</span>
+          <a href="https://www.linkedin.com/in/shriyan-avadhanula-744190428/details/certifications/" target="_blank" rel="noopener">View LinkedIn certifications ↗</a>
         </div>
       </div>
     </section>
